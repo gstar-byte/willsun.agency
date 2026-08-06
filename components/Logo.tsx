@@ -63,20 +63,20 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 44 }) => {
         </svg>
       </div>
 
-      {/* 3-Line Primary Tri-Color Typography (Blue, Yellow/Gold, Red) */}
+      {/* Executive Premium Typography (Slate Navy + Electric Blue Accent) */}
       <div className="flex flex-col justify-center leading-none space-y-0.5">
-        {/* Line 1: Electric Blue */}
-        <span className="font-extrabold text-xl tracking-tight text-blue-700 group-hover:text-blue-600 transition-colors">
-          WillSun<span className="text-blue-500">.agency</span>
+        {/* Line 1: Solid Dark Slate Navy + Brand Blue Suffix */}
+        <span className="font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">
+          WillSun<span className="text-blue-600">.agency</span>
         </span>
         
-        {/* Line 2: Vibrant Amber / Gold Yellow */}
-        <span className="text-[10px] tracking-wider text-amber-600 uppercase font-extrabold">
+        {/* Line 2: Refined Professional Slate Gray */}
+        <span className="text-[10px] tracking-wider text-slate-500 uppercase font-semibold">
           Growth & Monetization
         </span>
         
-        {/* Line 3: Vivid Crimson Red */}
-        <span className="text-[10px] tracking-widest text-red-600 uppercase font-black">
+        {/* Line 3: Subtle Low-Key Dark Slate Studio */}
+        <span className="text-[10px] tracking-widest text-slate-700 uppercase font-bold">
           Studio
         </span>
       </div>
