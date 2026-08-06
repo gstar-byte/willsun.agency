@@ -44,7 +44,7 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
         return {
           badge: t.about.badge,
           title: t.about.title,
-          subtitle: t.about.subtitle,
+          subtitle: t.about.p1,
         };
       case 'contact':
         return {
