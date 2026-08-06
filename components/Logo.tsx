@@ -70,9 +70,9 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 44 }) => {
           WillSun<span className="text-blue-600">.agency</span>
         </span>
         
-        {/* Line 2: Compact Professional Slate Gray (Fits Flush) */}
+        {/* Line 2: Refined Monetization Slate Gray (Fits Flush) */}
         <span className="text-[9.5px] tracking-wider text-slate-500 uppercase font-semibold">
-          Growth & Scale
+          Growth & Monetize
         </span>
         
         {/* Line 3: Crimson Red Accent Studio Badge */}
