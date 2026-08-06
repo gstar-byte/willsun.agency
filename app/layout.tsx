@@ -64,10 +64,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icon.svg?v=99', type: 'image/svg+xml' },
+      { url: '/icon.svg?v=200', type: 'image/svg+xml' },
     ],
-    shortcut: ['/icon.svg?v=99'],
-    apple: ['/icon.svg?v=99'],
+    shortcut: ['/icon.svg?v=200'],
+    apple: ['/icon.svg?v=200'],
   },
 };
 
