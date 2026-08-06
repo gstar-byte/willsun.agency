@@ -1,0 +1,21 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  {/* Pure Opaque White Background Base */}
+  <rect x="0" y="0" width="32" height="32" rx="7" fill="#FFFFFF" />
+  <rect x="1" y="1" width="30" height="30" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
+
+  {/* Dynamic W Trajectory Line */}
+  <path d="M 6 15 L 11 23 L 16 12 L 21 18 L 26 7" stroke="url(#favWLineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  {/* Three Ascending Dots */}
+  <circle cx="6" cy="15" r="2" fill="#4F46E5" />
+  <circle cx="16" cy="12" r="2.2" fill="#2563EB" />
+  <circle cx="26" cy="7" r="2.8" fill="#0284C7" />
+
+  <defs>
+    <linearGradient id="favWLineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#4F46E5" />
+      <stop offset="50%" stopColor="#2563EB" />
+      <stop offset="100%" stopColor="#0284C7" />
+    </linearGradient>
+  </defs>
+</svg>
