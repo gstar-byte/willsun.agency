@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
           </Link>
 
           {/* Quick Nav Links with Home */}
-          <div className="flex flex-wrap gap-6 text-xs text-slate-300 dark:text-slate-400 font-medium">
+          <div className="flex flex-wrap gap-6 text-sm text-slate-300 dark:text-slate-400 font-medium">
             <Link href="/" className="hover:text-blue-400 dark:hover:text-blue-400 transition-colors">
               {navT.home}
             </Link>
@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
           </div>
 
           {/* Copyright */}
-          <div className="text-xs text-slate-500 text-center md:text-right">
+          <div className="text-xs sm:text-sm text-slate-500 text-center md:text-right">
             © {new Date().getFullYear()} WillSun.agency. {t.rights}
           </div>
         </div>

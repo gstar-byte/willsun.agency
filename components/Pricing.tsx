@@ -47,19 +47,19 @@ export const Pricing: React.FC<PricingProps> = ({ lang, onOpenContact }) => {
               )}
 
               <div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2">
                   {plan.name}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-300 text-xs leading-relaxed mb-6 min-h-[36px]">
+                <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6 min-h-[44px]">
                   {plan.desc}
                 </p>
 
                 {/* Price Display */}
                 <div className="flex items-baseline mb-8 pb-6 border-b border-slate-100 dark:border-slate-800">
-                  <span className="text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+                  <span className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
                     {plan.price}
                   </span>
-                  <span className="text-slate-500 dark:text-slate-400 text-sm ml-2 font-medium">
+                  <span className="text-slate-500 dark:text-slate-400 text-sm sm:text-base ml-2 font-medium">
                     {plan.period}
                   </span>
                 </div>
@@ -67,7 +67,7 @@ export const Pricing: React.FC<PricingProps> = ({ lang, onOpenContact }) => {
                 {/* Features List */}
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feat, fIdx) => (
-                    <li key={fIdx} className="flex items-start space-x-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                    <li key={fIdx} className="flex items-start space-x-3 text-sm sm:text-base text-slate-700 dark:text-slate-300">
                       <div className="w-5 h-5 rounded-full bg-blue-50 dark:bg-blue-950/80 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0 mt-0.5">
                         <Check className="w-3.5 h-3.5" />
                       </div>
@@ -80,7 +80,7 @@ export const Pricing: React.FC<PricingProps> = ({ lang, onOpenContact }) => {
               {/* Action CTA */}
               <button
                 onClick={onOpenContact}
-                className={`w-full py-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center space-x-2 group ${
+                className={`w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider transition-all flex items-center justify-center space-x-2 group ${
                   plan.popular
                     ? 'bg-slate-900 dark:bg-blue-600 text-white hover:bg-slate-800 dark:hover:bg-blue-500 shadow-md hover:scale-[1.02]'
                     : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
