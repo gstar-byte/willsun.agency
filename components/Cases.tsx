@@ -19,17 +19,17 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
     : t.items.filter((c) => c.category === activeCategory);
 
   return (
-    <section id="cases" className="py-24 relative bg-white">
+    <section id="cases" className="py-24 relative bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 bg-blue-50 text-slate-800 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+          <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
             {t.badge}
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
             {t.title}
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
+          <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
             {t.subtitle}
           </p>
         </div>
@@ -42,8 +42,8 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
                 activeCategory === cat
-                  ? 'bg-slate-900 text-white shadow-md font-bold'
-                  : 'bg-slate-100 text-slate-700 border border-slate-200 hover:border-slate-300'
+                  ? 'bg-slate-900 dark:bg-blue-600 text-white shadow-md font-bold'
+                  : 'bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
               }`}
             >
               {cat === 'All' ? (lang === 'en' ? 'All Case Studies' : '全部案例') : cat}
@@ -56,33 +56,33 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
           {filteredCases.map((item, idx) => (
             <div
               key={idx}
-              className="bg-glass-card-light rounded-2xl p-8 border border-slate-200/90 hover:border-blue-500/50 transition-all duration-300 relative group overflow-hidden flex flex-col justify-between"
+              className="bg-glass-card-light dark:bg-slate-900 rounded-2xl p-8 border border-slate-200/90 dark:border-slate-800 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-300 relative group overflow-hidden flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md bg-blue-50 text-blue-700 border border-blue-200">
+                  <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900/50">
                     {item.category}
                   </span>
-                  <div className="flex items-center space-x-1 text-slate-700 text-xs font-bold">
-                    <TrendingUp className="w-4 h-4 text-blue-600" />
+                  <div className="flex items-center space-x-1 text-slate-700 dark:text-slate-300 text-xs font-bold">
+                    <TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                     <span>Proven Growth</span>
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {item.title}
                 </h3>
 
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
                   {item.desc}
                 </p>
               </div>
 
               <div>
                 {/* Highlight Result Card */}
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 text-white mb-6 shadow-md">
+                <div className="p-4 rounded-xl bg-slate-900 dark:bg-slate-950 border border-slate-800 dark:border-slate-800 text-white mb-6 shadow-md">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-blue-400 mb-1">
-                    {lang === 'en' ? 'Key Growth Result' : '核心商业化战绩'}
+                    {lang === 'en' ? 'Key Growth Result' : '核心商业化战力'}
                   </div>
                   <div className="text-base font-extrabold text-white">
                     {item.result}
@@ -94,9 +94,9 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
                   {item.metrics.map((m, mIdx) => (
                     <div
                       key={mIdx}
-                      className="flex items-center space-x-1.5 text-xs font-semibold text-slate-700"
+                      className="flex items-center space-x-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300"
                     >
-                      <CheckCircle className="w-3.5 h-3.5 text-blue-600" />
+                      <CheckCircle className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                       <span>{m}</span>
                     </div>
                   ))}

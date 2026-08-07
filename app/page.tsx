@@ -38,13 +38,13 @@ export default function Home() {
       {/* 3. Core Services Highlights Digest */}
       <div className="relative">
         <Services lang={lang} onOpenContact={() => setContactOpen(true)} />
-        <div className="bg-slate-50 pb-12 text-center">
+        <div className="bg-slate-50 dark:bg-slate-900/60 pb-12 text-center transition-colors duration-300">
           <Link
             href="/services"
-            className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-white border border-slate-300 text-xs font-bold text-slate-900 shadow-sm hover:border-blue-500 hover:text-blue-600 transition-all"
+            className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white shadow-sm hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
           >
             <span>{t.services.exploreMore}</span>
-            <ArrowRight className="w-4 h-4 text-blue-600" />
+            <ArrowRight className="w-4 h-4 text-blue-600 dark:text-blue-400" />
           </Link>
         </div>
       </div>
@@ -52,13 +52,13 @@ export default function Home() {
       {/* 4. Featured Cases Highlights Digest */}
       <div className="relative">
         <Cases lang={lang} />
-        <div className="bg-white pb-12 text-center">
+        <div className="bg-white dark:bg-slate-950 pb-12 text-center transition-colors duration-300">
           <Link
             href="/cases"
-            className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-slate-900 text-white text-xs font-bold shadow-md hover:bg-slate-800 transition-all"
+            className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold shadow-md hover:bg-slate-800 dark:hover:bg-blue-500 transition-all"
           >
             <span>{t.cases.exploreMore}</span>
-            <ArrowRight className="w-4 h-4 text-blue-400" />
+            <ArrowRight className="w-4 h-4 text-blue-400 dark:text-blue-200" />
           </Link>
         </div>
       </div>
@@ -66,13 +66,13 @@ export default function Home() {
       {/* 5. Engagement Plans Summary */}
       <div className="relative">
         <Pricing lang={lang} onOpenContact={() => setContactOpen(true)} />
-        <div className="bg-slate-50 pb-12 text-center">
+        <div className="bg-slate-50 dark:bg-slate-900/60 pb-12 text-center transition-colors duration-300">
           <Link
             href="/pricing"
-            className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-white border border-slate-300 text-xs font-bold text-slate-900 shadow-sm hover:border-blue-500 hover:text-blue-600 transition-all"
+            className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white shadow-sm hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
           >
             <span>{t.pricing.exploreMore}</span>
-            <ArrowRight className="w-4 h-4 text-blue-600" />
+            <ArrowRight className="w-4 h-4 text-blue-600 dark:text-blue-400" />
           </Link>
         </div>
       </div>
@@ -81,22 +81,22 @@ export default function Home() {
       <About lang={lang} />
 
       {/* 7. Contact Consultation Section Anchor */}
-      <section id="contact" className="py-20 border-t border-slate-200 bg-slate-50">
+      <section id="contact" className="py-20 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/80 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 bg-blue-50 text-slate-800 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+          <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
             {t.contact.badge}
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             {t.contact.title}
           </h2>
-          <p className="text-slate-600 text-base max-w-xl mx-auto mb-8 font-normal">
+          <p className="text-slate-600 dark:text-slate-300 text-base max-w-xl mx-auto mb-8 font-normal">
             {t.contact.subtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setContactOpen(true)}
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-slate-900 shadow-lg hover:bg-slate-800 hover:scale-[1.02] transition-all"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-slate-900 dark:bg-blue-600 shadow-lg hover:bg-slate-800 dark:hover:bg-blue-500 hover:scale-[1.02] transition-all"
             >
               {t.nav.cta} & Consultation
             </button>

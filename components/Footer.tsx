@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
   const navT = dictionary[lang].nav;
 
   return (
-    <footer className="bg-slate-900 text-slate-400 border-t border-slate-800 py-12">
+    <footer className="bg-slate-900 dark:bg-slate-950 text-slate-400 border-t border-slate-800 py-12 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Tagline */}
