@@ -88,17 +88,55 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
       )}
       {pageType === 'about' && <About lang={lang} />}
       {pageType === 'contact' && (
-        <section className="py-20 bg-slate-50 border-t border-slate-200">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-6">
-              {t.contact.title}
-            </h2>
-            <button
-              onClick={() => setContactOpen(true)}
-              className="px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-slate-900 shadow-lg hover:bg-slate-800 transition-all"
-            >
-              {t.nav.cta} & Consultation
-            </button>
+        <section className="py-16 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 sm:p-10 shadow-xl">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
+                  {t.contact.title}
+                </h2>
+                <p className="text-slate-600 dark:text-slate-300 text-sm max-w-lg mx-auto">
+                  {t.contact.subtitle}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex items-center justify-between">
+                  <div>
+                    <div className="text-xs font-bold text-slate-900 dark:text-white">{t.contact.wechatTitle}</div>
+                    <div className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400 mt-1">{t.contact.wechatId}</div>
+                  </div>
+                  <button
+                    onClick={() => navigator.clipboard.writeText(t.contact.wechatId)}
+                    className="px-3 py-1.5 rounded-lg bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-blue-500 transition-all"
+                  >
+                    Copy WeChat
+                  </button>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex items-center justify-between">
+                  <div>
+                    <div className="text-xs font-bold text-slate-900 dark:text-white">{t.contact.emailTitle}</div>
+                    <div className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400 mt-1 truncate max-w-[150px]">{t.contact.emailAddr}</div>
+                  </div>
+                  <button
+                    onClick={() => navigator.clipboard.writeText(t.contact.emailAddr)}
+                    className="px-3 py-1.5 rounded-lg bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-blue-500 transition-all"
+                  >
+                    Copy Email
+                  </button>
+                </div>
+              </div>
+
+              <div className="text-center pt-4 border-t border-slate-100 dark:border-slate-800">
+                <button
+                  onClick={() => setContactOpen(true)}
+                  className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-slate-900 dark:bg-blue-600 shadow-lg hover:bg-slate-800 dark:hover:bg-blue-500 hover:scale-[1.02] transition-all"
+                >
+                  {t.contact.submitBtn} & Assessment Form
+                </button>
+              </div>
+            </div>
           </div>
         </section>
       )}

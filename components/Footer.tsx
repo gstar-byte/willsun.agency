@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
   const navT = dictionary[lang].nav;
 
   return (
-    <footer className="bg-slate-900 dark:bg-slate-950 text-slate-400 border-t border-slate-800 py-12 transition-colors duration-300">
+    <footer className="bg-slate-900 dark:bg-slate-950 text-slate-400 border-t border-slate-800 dark:border-slate-800/80 py-12 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Tagline */}
@@ -23,23 +23,23 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
           </Link>
 
           {/* Quick Nav Links with Home */}
-          <div className="flex flex-wrap gap-6 text-xs text-slate-300 font-medium">
-            <Link href="/" className="hover:text-blue-400 transition-colors">
+          <div className="flex flex-wrap gap-6 text-xs text-slate-300 dark:text-slate-400 font-medium">
+            <Link href="/" className="hover:text-blue-400 dark:hover:text-blue-400 transition-colors">
               {navT.home}
             </Link>
-            <Link href="/services" className="hover:text-blue-400 transition-colors">
+            <Link href="/services" className="hover:text-blue-400 dark:hover:text-blue-400 transition-colors">
               {navT.services}
             </Link>
-            <Link href="/cases" className="hover:text-blue-400 transition-colors">
+            <Link href="/cases" className="hover:text-blue-400 dark:hover:text-blue-400 transition-colors">
               {navT.cases}
             </Link>
-            <Link href="/pricing" className="hover:text-blue-400 transition-colors">
+            <Link href="/pricing" className="hover:text-blue-400 dark:hover:text-blue-400 transition-colors">
               {navT.pricing}
             </Link>
-            <Link href="/about" className="hover:text-blue-400 transition-colors">
+            <Link href="/about" className="hover:text-blue-400 dark:hover:text-blue-400 transition-colors">
               {navT.about}
             </Link>
-            <Link href="/contact" className="hover:text-blue-400 transition-colors">
+            <Link href="/contact" className="hover:text-blue-400 dark:hover:text-blue-400 transition-colors">
               {navT.contact}
             </Link>
           </div>
