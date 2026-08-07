@@ -58,22 +58,22 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
   const hero = getHeroContent();
 
   return (
-    <main className="min-h-screen relative bg-white text-slate-900 pt-24">
+    <main className="min-h-screen relative bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 pt-24">
       <Header
         lang={lang}
         onLanguageChange={(newLang) => setLang(newLang)}
         onOpenContact={() => setContactOpen(true)}
       />
 
-      <div className="bg-gradient-to-b from-slate-100 to-white py-16 border-b border-slate-200">
+      <div className="bg-gradient-to-b from-slate-100 to-white dark:from-slate-900 dark:to-slate-950 py-16 border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 bg-blue-50 text-slate-800 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+          <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/50 text-slate-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
             {hero.badge}
           </div>
-          <h1 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          <h1 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4">
             {hero.title}
           </h1>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto font-normal">
+          <p className="text-slate-600 dark:text-slate-300 text-lg max-w-2xl mx-auto font-normal">
             {hero.subtitle}
           </p>
         </div>

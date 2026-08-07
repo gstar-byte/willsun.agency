@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Tagline */}
           <Link href="/" className="flex items-center space-x-3">
-            <Logo size={36} />
+            <Logo size={36} invert={true} />
           </Link>
 
           {/* Quick Nav Links with Home */}

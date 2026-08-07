@@ -21,7 +21,7 @@ export default function Home() {
   const t = dictionary[lang];
 
   return (
-    <main className="min-h-screen relative overflow-x-hidden bg-white text-slate-900 selection:bg-blue-600 selection:text-white">
+    <main className="min-h-screen relative overflow-x-hidden bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 selection:bg-blue-600 selection:text-white">
       {/* Header Navigation */}
       <Header
         lang={lang}

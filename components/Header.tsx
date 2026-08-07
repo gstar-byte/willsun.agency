@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Globe, Menu, X, ArrowRight } from 'lucide-react';
+import { Globe, Menu, X, ArrowRight, Sun, Moon } from 'lucide-react';
 import { dictionary, Language } from '@/lib/dictionary';
 import { Logo } from '@/components/Logo';
 
@@ -22,14 +22,41 @@ export const Header: React.FC<HeaderProps> = ({
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
+
+    // Initial theme check
+    const savedTheme = localStorage.getItem('theme');
+    if (
+      savedTheme === 'dark' ||
+      (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setIsDark(false);
+      document.documentElement.classList.remove('dark');
+    }
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    if (isDark) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      setIsDark(false);
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      setIsDark(true);
+    }
+  };
 
   const isActive = (path: string) => {
     if (path === '/' && pathname === '/') return true;
@@ -41,7 +68,7 @@ export const Header: React.FC<HeaderProps> = ({
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-md border-b border-slate-200/80 py-3.5 shadow-sm'
+          ? 'bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 py-3.5 shadow-sm'
           : 'bg-transparent py-5'
       }`}
     >
@@ -53,11 +80,11 @@ export const Header: React.FC<HeaderProps> = ({
           </Link>
 
           {/* Multi-Page Navigation with Home */}
-          <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-700">
+          <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-700 dark:text-slate-300">
             <Link
               href="/"
               className={`transition-colors ${
-                isActive('/') ? 'text-blue-600 font-bold' : 'hover:text-blue-600'
+                isActive('/') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.home}
@@ -65,7 +92,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/services"
               className={`transition-colors ${
-                isActive('/services') ? 'text-blue-600 font-bold' : 'hover:text-blue-600'
+                isActive('/services') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.services}
@@ -73,7 +100,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/cases"
               className={`transition-colors ${
-                isActive('/cases') ? 'text-blue-600 font-bold' : 'hover:text-blue-600'
+                isActive('/cases') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.cases}
@@ -81,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/pricing"
               className={`transition-colors ${
-                isActive('/pricing') ? 'text-blue-600 font-bold' : 'hover:text-blue-600'
+                isActive('/pricing') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.pricing}
@@ -89,7 +116,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/about"
               className={`transition-colors ${
-                isActive('/about') ? 'text-blue-600 font-bold' : 'hover:text-blue-600'
+                isActive('/about') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.about}
@@ -97,52 +124,78 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/contact"
               className={`transition-colors ${
-                isActive('/contact') ? 'text-blue-600 font-bold' : 'hover:text-blue-600'
+                isActive('/contact') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.contact}
             </Link>
           </nav>
 
-          {/* Right Action & i18n */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Right Action: Theme Switcher, i18n & CTA */}
+          <div className="hidden md:flex items-center space-x-3">
+            {/* Dark / Light Mode Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-sm"
+              aria-label="Toggle Theme"
+              title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            >
+              {isDark ? (
+                <Sun className="w-4 h-4 text-amber-400" />
+              ) : (
+                <Moon className="w-4 h-4 text-slate-600" />
+              )}
+            </button>
+
             {/* Language Switcher */}
             <button
               onClick={() => onLanguageChange(lang === 'en' ? 'zh' : 'en')}
-              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-full border border-slate-300 bg-slate-50 text-slate-700 text-xs font-semibold hover:border-blue-500 hover:text-blue-600 hover:bg-white transition-all shadow-sm"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 text-xs font-semibold hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-sm"
               aria-label="Toggle language"
             >
-              <Globe className="w-3.5 h-3.5 text-blue-600" />
+              <Globe className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
               <span>{lang === 'en' ? '中文' : 'English'}</span>
             </button>
 
             {/* Free Audit Button */}
             <button
               onClick={onOpenContact}
-              className="relative group overflow-hidden px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-slate-900 shadow-md hover:bg-slate-800 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
+              className="relative group overflow-hidden px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-slate-900 dark:bg-blue-600 shadow-md hover:bg-slate-800 dark:hover:bg-blue-500 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
             >
               <span className="relative z-10 flex items-center space-x-1.5">
                 <span>{t.cta}</span>
-                <ArrowRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 text-blue-400 dark:text-blue-200 group-hover:translate-x-1 transition-transform" />
               </span>
             </button>
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="flex md:hidden items-center space-x-3">
+          <div className="flex md:hidden items-center space-x-2">
+            <button
+              onClick={toggleTheme}
+              className="p-1.5 rounded-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300"
+              aria-label="Toggle Theme"
+            >
+              {isDark ? (
+                <Sun className="w-4 h-4 text-amber-400" />
+              ) : (
+                <Moon className="w-4 h-4 text-slate-600" />
+              )}
+            </button>
+
             <button
               onClick={() => onLanguageChange(lang === 'en' ? 'zh' : 'en')}
-              className="px-2.5 py-1 text-xs border border-slate-300 rounded-full text-slate-700 font-semibold bg-slate-50"
+              className="px-2.5 py-1 text-xs border border-slate-200 dark:border-slate-800 rounded-full text-slate-700 dark:text-slate-300 font-semibold bg-slate-50 dark:bg-slate-900"
             >
               {lang === 'en' ? '中' : 'EN'}
             </button>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-700 hover:text-slate-900"
+              className="p-2 text-slate-700 dark:text-slate-300 hover:text-slate-900"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-slate-900" />
+                <X className="w-6 h-6 text-slate-900 dark:text-white" />
               ) : (
                 <Menu className="w-6 h-6" />
               )}

@@ -5,13 +5,14 @@ import React from 'react';
 interface LogoProps {
   className?: string;
   size?: number;
+  invert?: boolean;
 }
 
-export const Logo: React.FC<LogoProps> = ({ className = '', size = 44 }) => {
+export const Logo: React.FC<LogoProps> = ({ className = '', size = 44, invert = false }) => {
   return (
     <div className={`flex items-center space-x-3.5 ${className}`}>
       {/* Pure White Base 3-Dot Ascending W Logo Icon */}
-      <div className="relative group flex items-center justify-center">
+      <div className="relative group flex items-center justify-center shrink-0">
         <svg
           width={size}
           height={size}
@@ -63,20 +64,28 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 44 }) => {
         </svg>
       </div>
 
-      {/* Executive Premium Typography (Slate Navy + Growth Blue + Crimson Red Accent) */}
+      {/* Executive Premium Typography */}
       <div className="flex flex-col justify-center leading-none space-y-0.5">
-        {/* Line 1: Solid Dark Slate Navy + Brand Blue Suffix */}
-        <span className="font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">
-          WillSun<span className="text-blue-600">.agency</span>
+        {/* Line 1: Dark Slate or White depending on invert / dark mode */}
+        <span
+          className={`font-extrabold text-xl tracking-tight transition-colors ${
+            invert ? 'text-white' : 'text-slate-900 dark:text-white'
+          } group-hover:text-blue-500`}
+        >
+          WillSun<span className="text-blue-500">.agency</span>
         </span>
-        
-        {/* Line 2: Refined Monetization Slate Gray (Fits Flush) */}
-        <span className="text-[9.5px] tracking-wider text-slate-500 uppercase font-semibold">
+
+        {/* Line 2: Monetization Gray */}
+        <span
+          className={`text-[9.5px] tracking-wider uppercase font-semibold ${
+            invert ? 'text-slate-400' : 'text-slate-500 dark:text-slate-400'
+          }`}
+        >
           Growth & Monetize
         </span>
-        
+
         {/* Line 3: Crimson Red Accent Studio Badge */}
-        <span className="text-[9.5px] tracking-widest text-red-600 uppercase font-extrabold">
+        <span className="text-[9.5px] tracking-widest text-red-500 uppercase font-extrabold">
           Studio
         </span>
       </div>
