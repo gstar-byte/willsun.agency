@@ -81,20 +81,21 @@ export default function RootLayout({
     <html lang="en" className={`scroll-smooth ${inter.variable}`}>
       <head>
         {/* Google tag (gtag.js) */}
-        <Script
+        <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-1B29WEPTV9"
-          strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
 
-            gtag('config', 'G-1B29WEPTV9');
-          `}
-        </Script>
+              gtag('config', 'G-1B29WEPTV9');
+            `,
+          }}
+        />
         <JsonLd />
       </head>
       <body className={`${inter.className} bg-white text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white`}>
