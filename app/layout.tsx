@@ -7,6 +7,8 @@ import { JsonLd } from '@/components/JsonLd';
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
+  preload: true,
+  fallback: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
   variable: '--font-inter',
 });
 
@@ -80,25 +82,24 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable}`}>
       <head>
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-1B29WEPTV9"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-1B29WEPTV9');
-            `,
-          }}
-        />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <JsonLd />
       </head>
       <body className={`${inter.className} bg-white text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white`}>
+        {/* Google tag (gtag.js) via Next.js Script component */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1B29WEPTV9"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1B29WEPTV9');
+          `}
+        </Script>
         {children}
       </body>
     </html>

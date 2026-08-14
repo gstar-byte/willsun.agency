@@ -56,6 +56,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          aria-label="Close contact dialog"
         >
           <X className="w-5 h-5" />
         </button>
@@ -87,6 +88,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               <button
                 onClick={() => handleCopy(t.wechatId, 'wechat')}
                 className="p-1 text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                aria-label="Copy WeChat ID"
               >
                 {copiedWeChat ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
               </button>
@@ -109,6 +111,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               <button
                 onClick={() => handleCopy(t.emailAddr, 'email')}
                 className="p-1 text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                aria-label="Copy Email address"
               >
                 {copiedEmail ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
               </button>

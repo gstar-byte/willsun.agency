@@ -71,17 +71,17 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
 
             {/* 17-Year Milestone Timeline */}
             <div className="mb-10">
-              <h4 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+              <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">
                 {t.timelineTitle}
-              </h4>
+              </h3>
 
               <div className="space-y-4 border-l-2 border-slate-200 dark:border-slate-800 pl-6 ml-2">
                 {t.timeline.map((item, idx) => (
                   <div key={idx} className="relative">
                     <div className="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-blue-600 border-2 border-white dark:border-slate-900" />
-                    <h5 className="text-sm font-bold text-slate-900 dark:text-white mb-1">
+                    <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-1">
                       {item.phase}
-                    </h5>
+                    </h4>
                     <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                       {item.desc}
                     </p>

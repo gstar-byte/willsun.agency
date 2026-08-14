@@ -44,7 +44,7 @@ export const Services: React.FC<ServicesProps> = ({ lang, onOpenContact }) => {
                     <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/80 border border-blue-200 dark:border-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 group-hover:bg-slate-900 dark:group-hover:bg-blue-600 group-hover:text-blue-400 dark:group-hover:text-white transition-all">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-2xl font-black text-slate-300 dark:text-slate-700 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <span className="text-2xl font-black text-slate-400 dark:text-slate-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       0{index + 1}
                     </span>
                   </div>

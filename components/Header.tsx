@@ -137,7 +137,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-sm"
-              aria-label="Toggle Theme"
+              aria-label={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
               title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             >
               {isDark ? (
@@ -151,7 +151,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={() => onLanguageChange(lang === 'en' ? 'zh' : 'en')}
               className="flex items-center space-x-1.5 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 text-xs font-semibold hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-sm"
-              aria-label="Toggle language"
+              aria-label={lang === 'en' ? '切换为中文版' : 'Switch to English'}
             >
               <Globe className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
               <span>{lang === 'en' ? '中文' : 'English'}</span>
@@ -174,7 +174,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={toggleTheme}
               className="p-1.5 rounded-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300"
-              aria-label="Toggle Theme"
+              aria-label={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             >
               {isDark ? (
                 <Sun className="w-4 h-4 text-amber-400" />
@@ -186,6 +186,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={() => onLanguageChange(lang === 'en' ? 'zh' : 'en')}
               className="px-2.5 py-1 text-xs border border-slate-200 dark:border-slate-800 rounded-full text-slate-700 dark:text-slate-300 font-semibold bg-slate-50 dark:bg-slate-900"
+              aria-label={lang === 'en' ? '切换为中文版' : 'Switch to English'}
             >
               {lang === 'en' ? '中' : 'EN'}
             </button>
@@ -193,6 +194,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-700 dark:text-slate-300 hover:text-slate-900"
+              aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6 text-slate-900 dark:text-white" />

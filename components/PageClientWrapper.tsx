@@ -109,6 +109,7 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
                   <button
                     onClick={() => navigator.clipboard.writeText(t.contact.wechatId)}
                     className="px-3 py-1.5 rounded-lg bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-blue-500 transition-all"
+                    aria-label="Copy WeChat ID"
                   >
                     Copy WeChat
                   </button>
@@ -122,6 +123,7 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
                   <button
                     onClick={() => navigator.clipboard.writeText(t.contact.emailAddr)}
                     className="px-3 py-1.5 rounded-lg bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-blue-500 transition-all"
+                    aria-label="Copy Email address"
                   >
                     Copy Email
                   </button>
