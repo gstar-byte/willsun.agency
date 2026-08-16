@@ -85,7 +85,11 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 44, invert = 
         </span>
 
         {/* Line 3: Crimson Red Accent Studio Badge */}
-        <span className="text-[9.5px] tracking-widest text-red-600 dark:text-red-400 uppercase font-extrabold">
+        <span
+          className={`text-[9.5px] tracking-widest uppercase font-extrabold ${
+            invert ? 'text-red-400' : 'text-red-600 dark:text-red-400'
+          }`}
+        >
           Studio
         </span>
       </div>

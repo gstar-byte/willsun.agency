@@ -87,12 +87,12 @@ export default function RootLayout({
         <JsonLd />
       </head>
       <body className={`${inter.className} bg-white text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white`}>
-        {/* Google tag (gtag.js) via Next.js Script component */}
+        {/* Google tag (gtag.js) via Next.js Script component with lazyOnload */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1B29WEPTV9"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
