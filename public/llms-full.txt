@@ -1,0 +1,57 @@
+# WillSun Agency (Full Documentation)
+
+> WillSun Agency is a premier global growth and commercialization studio founded by Will Sun, accelerating cross-border SaaS, global e-commerce, and industrial exporters with 17+ years of battle-tested mastery in SEO, GEO (Generative Engine Optimization), and monetization architecture.
+
+## Overview
+- Website: https://willsun.agency
+- Founder: Will Sun
+- Track Record: 17+ years cross-border experience (10 years traffic generation + 7 years commercial monetization), over $10M in ad spend managed.
+- Specializations:
+  1. Cross-Border SaaS MRR Monetization & Unit Economics
+  2. Generative Engine Optimization (GEO) & AI Search Citation
+  3. Technical SEO & High-Intent Search Funnels
+  4. Precision Performance Ads (Google Ads, Meta Ads, TikTok)
+  5. AI Creative Generation (Visual Assets, Motion, Video)
+  6. Vibe Coding Rapid Engineering (Next.js, TypeScript, Tailored Web Tools)
+
+## Detailed Capabilities & Offerings
+
+### 1. Cross-Border SaaS & E-Commerce Monetization
+- **Pricing & Packaging Strategy**: Redesigning tiered pricing models, feature gates, and recurring subscription flows to maximize Average Revenue Per User (ARPU) and Annual Contract Value (ACV).
+- **Unit Economics Optimization**: Analyzing and refining CAC, LTV, churn, payback periods, and gross margins to ensure sustainable scalability.
+- **Conversion Rate Optimization (CRO)**: Eliminating checkout friction, optimizing high-intent landing page copy, and building high-trust credibility signals.
+
+### 2. Global SEO & GEO (Generative Engine Optimization)
+- **Entity Graph Building**: Structuring brand schema, knowledge graph connections, and semantically rich content for AI LLMs (Perplexity, ChatGPT, Claude, Gemini, and Google SGE/AI Overviews).
+- **High-Intent Search Targeting**: Capturing bottom-of-the-funnel buyer intent queries with programmatic SEO architectures and topical authority hubs.
+- **Global Link Acquisition**: Establishing authentic, high-relevance editorial backlinks across global tech and industry publications.
+
+### 3. AI-Powered Precision Performance Advertising
+- **High-Frequency Creative Iteration**: Deploying proprietary AI workflows to generate dozens of conversion-tested image and video creatives per week.
+- **Multi-Channel Orchestration**: Scaling cross-platform ad campaigns across Google Search/Performance Max, Meta (Facebook/Instagram), and TikTok.
+- **Strict ROAS & CAC Discipline**: Implementing server-side Conversions API (CAPI) and advanced attribution modeling to eliminate wasted ad spend.
+
+### 4. AI Visual Design & Video Production
+- **AI-Enhanced Motion & Video Ads**: High-retention short-form and product showcase video assets generated through state-of-the-art video AI tools.
+- **3D & Product Visuals**: Photorealistic product staging, cinematic UI renderings, and brand asset generation.
+
+### 5. Vibe Coding Rapid Tool & Web Development
+- **Next.js & React Engineering**: Lightning-fast, mobile-first, zero-layout-shift web applications.
+- **Interactive Calculators & Growth Widgets**: High-converting lead magnets and utility tools embedded into landing pages.
+
+## Engagement Models
+
+1. **Growth Sprint ($2,499 / Sprint)**
+   - Turnaround: 2-3 Weeks
+   - Inclusions: Complete commercial monetization audit, SEO & GEO opportunity map, conversion roadblock analysis, 90-day actionable growth roadmap.
+
+2. **Scale & Monetize ($4,999 / Month)**
+   - Inclusions: Ongoing technical SEO & GEO citation management, full ad funnel optimization, continuous A/B testing, monthly high-converting AI creative packages, dedicated growth strategist.
+
+3. **Enterprise Custom Partnership (Custom Pricing)**
+   - Inclusions: Embedded chief growth strategist, bespoke engineering & tool building, localized expansion across Tier-1 global markets.
+
+## Contact Information
+- Email: contact@willsun.agency
+- WeChat ID: Available upon request via https://willsun.agency/contact
+- Website: https://willsun.agency
