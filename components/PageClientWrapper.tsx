@@ -8,6 +8,7 @@ import { Cases } from '@/components/Cases';
 import { Pricing } from '@/components/Pricing';
 import { About } from '@/components/About';
 import { ContactModal } from '@/components/ContactModal';
+import { ContactForm } from '@/components/ContactForm';
 import { Footer } from '@/components/Footer';
 
 interface PageClientWrapperProps {
@@ -89,7 +90,7 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
       {pageType === 'about' && <About lang={lang} />}
       {pageType === 'contact' && (
         <section className="py-16 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
-          <div className="max-w-4xl mx-auto px-4">
+          <div className="max-w-2xl mx-auto px-4">
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 sm:p-10 shadow-xl">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
@@ -100,30 +101,7 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
                 </p>
               </div>
 
-              <div className="max-w-md mx-auto mb-8">
-                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs font-bold text-slate-900 dark:text-white">{t.contact.wechatTitle}</div>
-                    <div className="text-sm font-mono font-bold text-blue-600 dark:text-blue-400 mt-1">{t.contact.wechatId}</div>
-                  </div>
-                  <button
-                    onClick={() => navigator.clipboard.writeText(t.contact.wechatId)}
-                    className="px-4 py-2 rounded-lg bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-blue-500 transition-all shadow-sm"
-                    aria-label="Copy WeChat ID"
-                  >
-                    Copy WeChat
-                  </button>
-                </div>
-              </div>
-
-              <div className="text-center pt-4 border-t border-slate-100 dark:border-slate-800">
-                <button
-                  onClick={() => setContactOpen(true)}
-                  className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-slate-900 dark:bg-blue-600 shadow-lg hover:bg-slate-800 dark:hover:bg-blue-500 hover:scale-[1.02] transition-all"
-                >
-                  {t.contact.submitBtn} & Assessment Form
-                </button>
-              </div>
+              <ContactForm lang={lang} />
             </div>
           </div>
         </section>
