@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import { dictionary, Language } from '@/lib/dictionary';
@@ -38,14 +38,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, onSuccess }) => 
         },
         body: JSON.stringify({
           _subject: `【WillSun Agency】来自 ${formData.name} 的出海增长诊断咨询`,
-          name: formData.name,
-          email: formData.email,
-          website: formData.website || 'N/A',
-          message: formData.message,
-          '客户称呼': formData.name,
-          '联系邮箱': formData.email,
-          '网站链接': formData.website || '未提供',
-          '需求与痛点': formData.message,
+          _replyto: formData.email,
+          '客户姓名 / Name': formData.name,
+          '联系邮箱 / Email': formData.email,
+          '网站链接 / Website': formData.website || '未提供',
+          '需求与痛点 / Message': formData.message,
           _template: 'table',
           _captcha: 'false',
         }),
