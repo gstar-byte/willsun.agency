@@ -32,3 +32,5 @@ next-env.d.ts
 # temp & session
 .edge-session
 *.log
+
+.vercel
