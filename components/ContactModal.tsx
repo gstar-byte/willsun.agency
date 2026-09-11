@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { dictionary, Language } from '@/lib/dictionary';
-import { X, MessageSquare, Mail, Copy, Check, Send, Sparkles, Loader2 } from 'lucide-react';
+import { X, MessageSquare, Copy, Check, Send, Sparkles, Loader2 } from 'lucide-react';
 
 interface ContactModalProps {
   lang: Language;
@@ -17,7 +17,6 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 }) => {
   const t = dictionary[lang].contact;
   const [copiedWeChat, setCopiedWeChat] = useState(false);
-  const [copiedEmail, setCopiedEmail] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -29,15 +28,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     message: '',
   });
 
-  const handleCopy = (text: string, type: 'wechat' | 'email') => {
+  const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
-    if (type === 'wechat') {
-      setCopiedWeChat(true);
-      setTimeout(() => setCopiedWeChat(false), 2000);
-    } else {
-      setCopiedEmail(true);
-      setTimeout(() => setCopiedEmail(false), 2000);
-    }
+    setCopiedWeChat(true);
+    setTimeout(() => setCopiedWeChat(false), 2000);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -98,12 +92,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
           <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-1">{t.subtitle}</p>
         </div>
 
-        {/* Quick Contact Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-          {/* WeChat Card */}
-          <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex flex-col justify-between">
-            <div className="flex items-center space-x-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+        {/* Quick WeChat Contact Card */}
+        <div className="mb-6">
+          <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
                 <MessageSquare className="w-5 h-5" />
               </div>
               <div>
@@ -111,37 +104,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 <div className="text-[11px] text-slate-500 dark:text-slate-400">{t.wechatDesc}</div>
               </div>
             </div>
-            <div className="flex items-center justify-between p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 font-mono text-xs font-bold text-slate-900 dark:text-white">
-              <span>{t.wechatId}</span>
+            <div className="flex items-center space-x-2 pl-3">
+              <span className="font-mono text-sm font-bold text-blue-600 dark:text-blue-400">{t.wechatId}</span>
               <button
-                onClick={() => handleCopy(t.wechatId, 'wechat')}
-                className="p-1 text-slate-500 hover:text-slate-900 dark:hover:text-white"
+                onClick={() => handleCopy(t.wechatId)}
+                className="p-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors shadow-sm"
                 aria-label="Copy WeChat ID"
               >
                 {copiedWeChat ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
-              </button>
-            </div>
-          </div>
-
-          {/* Email Card */}
-          <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex flex-col justify-between">
-            <div className="flex items-center space-x-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400">
-                <Mail className="w-5 h-5" />
-              </div>
-              <div>
-                <div className="text-xs font-bold text-slate-900 dark:text-white">{t.emailTitle}</div>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400">{t.emailDesc}</div>
-              </div>
-            </div>
-            <div className="flex items-center justify-between p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 font-mono text-xs font-bold text-slate-900 dark:text-white">
-              <span className="truncate mr-2">{t.emailAddr}</span>
-              <button
-                onClick={() => handleCopy(t.emailAddr, 'email')}
-                className="p-1 text-slate-500 hover:text-slate-900 dark:hover:text-white"
-                aria-label="Copy Email address"
-              >
-                {copiedEmail ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
               </button>
             </div>
           </div>

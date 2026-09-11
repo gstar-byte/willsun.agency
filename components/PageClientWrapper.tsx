@@ -100,32 +100,18 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div className="max-w-md mx-auto mb-8">
                 <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex items-center justify-between">
                   <div>
                     <div className="text-xs font-bold text-slate-900 dark:text-white">{t.contact.wechatTitle}</div>
-                    <div className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400 mt-1">{t.contact.wechatId}</div>
+                    <div className="text-sm font-mono font-bold text-blue-600 dark:text-blue-400 mt-1">{t.contact.wechatId}</div>
                   </div>
                   <button
                     onClick={() => navigator.clipboard.writeText(t.contact.wechatId)}
-                    className="px-3 py-1.5 rounded-lg bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-blue-500 transition-all"
+                    className="px-4 py-2 rounded-lg bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-blue-500 transition-all shadow-sm"
                     aria-label="Copy WeChat ID"
                   >
                     Copy WeChat
-                  </button>
-                </div>
-
-                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs font-bold text-slate-900 dark:text-white">{t.contact.emailTitle}</div>
-                    <div className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400 mt-1 truncate max-w-[150px]">{t.contact.emailAddr}</div>
-                  </div>
-                  <button
-                    onClick={() => navigator.clipboard.writeText(t.contact.emailAddr)}
-                    className="px-3 py-1.5 rounded-lg bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-blue-500 transition-all"
-                    aria-label="Copy Email address"
-                  >
-                    Copy Email
                   </button>
                 </div>
               </div>
