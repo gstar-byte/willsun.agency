@@ -175,8 +175,8 @@ export const dictionary = {
     about: {
       badge: 'FOUNDER & STUDIO TEAM',
       title: '17 Years of Battle-Tested Growth & Monetization',
-      p1: 'I am Will Sun, founder of WillSun Agency. Over the past 17 years, I have navigated every evolution of digital growth: Spending the first 10 years mastering user traffic scaling, and the last 7 years specializing in commercialization and revenue monetization.',
-      p2: 'Today, combined with Vibe Coding and our in-house AI visual designers, we help SaaS founders and e-commerce leaders build lean, high-margin, and globally scalable revenue engines.',
+      p1: 'I am Will Sun, founder of WillSun Agency. As a native Chinese speaker with full professional English fluency, I bring a unique dual-lens advantage to cross-border scaling and global commercialization. Over the past 17 years, I have navigated every evolution of digital growth: Spending the first 10 years mastering global user traffic scaling, and the last 7 years specializing in commercialization, unit economics, and revenue monetization.',
+      p2: 'Today, combined with Vibe Coding and our in-house AI visual designers, we help cross-border SaaS founders and global e-commerce leaders build lean, high-margin, and globally scalable revenue engines with seamless bilingual and cross-cultural communication.',
       timelineTitle: '17-Year Milestone Trajectory',
       timeline: [
         { phase: 'Phase 1: 10 Years Traffic Growth', desc: 'Deep-dive into global SEO, digital advertising, and viral user acquisition for cross-border brands.' },
@@ -187,8 +187,9 @@ export const dictionary = {
         { num: '17 Yrs', text: 'Industry Experience' },
         { num: '10 Yrs Growth', text: '+ 7 Yrs Monetization' },
         { num: '$10M+', text: 'Ad Spend Managed' },
-        { num: 'Vibe Coding', text: '& AI Video Creative' },
+        { num: 'Bilingual', text: 'Native CN · Fluent EN' },
       ],
+      languages: 'Native Mandarin Chinese · Professional Fluent English',
     },
     contact: {
       badge: 'START YOUR GROWTH JOURNEY',
@@ -196,7 +197,7 @@ export const dictionary = {
       subtitle: 'Connect directly with Will Sun via WeChat, Email, or submit a request for a free growth assessment.',
       wechatTitle: 'WeChat Contact',
       wechatDesc: 'Scan or copy WeChat ID for instant consultation',
-      wechatId: 'WillSunGrowth',
+      wechatId: '591611431',
       emailTitle: 'Direct Email',
       emailDesc: 'Response within 12 hours guaranteed',
       emailAddr: 'contact@willsun.agency',
@@ -206,7 +207,7 @@ export const dictionary = {
       websiteLabel: 'Website / App URL',
       messageLabel: 'Current Commercialization Challenges & Growth Goals',
       submitBtn: 'Submit Audit Request',
-      successMsg: 'Thank you! We will get back to you within 12 hours.',
+      successMsg: 'Thank you! Your audit request has been sent to Will Sun. We will get back to you within 12 hours.',
     },
     footer: {
       rights: 'All rights reserved.',
@@ -387,8 +388,8 @@ export const dictionary = {
     about: {
       badge: '关于创始人与工作室团队',
       title: '17 年深耕 · 从流量增长到商业化变现',
-      p1: '我是 Will Sun，WillSun Agency 的创始人。在过去 17 年中，我经历了数字增长的完整演进路径：前 10 年专注于全网流量突破与用户规模获取，最近 7 年专注于商业化变现（Monetization）与高 ROI 盈利模型。',
-      p2: '今年开始，我们将 AI Vibe Coding 极速开发与工作室资深设计师的 AI 出图出视频能力全面融入增长工作流，帮助 SaaS 创始人与电商领导者打造高毛利、可规模化全球扩展的真实商业化引擎。',
+      p1: '我是 Will Sun，WillSun Agency 的创始人。我是中国人，母语为中文，英语自由流利交流。在过去 17 年中，我经历了出海与数字增长的完整演进路径：前 10 年专注于全网流量突破与用户规模获取，最近 7 年专注于商业化变现（Monetization）与高 ROI 盈利模型。',
+      p2: '得益于对中国出海团队痛点的深刻共鸣与面向海外客户的无障碍母语级双语沟通能力，结合 AI Vibe Coding 极速开发与工作室资深设计师的 AI 出图出视频能力，我们帮助 SaaS 创始人与出海企业无缝链接全球客户，打造高毛利、可规模化全球扩展的真实商业化引擎。',
       timelineTitle: '17 年核心里程碑演进轨迹',
       timeline: [
         { phase: '阶段一 (前10年)：流量增长期', desc: '深耕全球 SEO、数字广告买量与全网流量池获客，积淀庞大出海抓手。' },
@@ -399,8 +400,9 @@ export const dictionary = {
         { num: '17 年', text: '行业沉淀' },
         { num: '10年流量', text: '+ 7年商业化' },
         { num: '$10M+', text: '管理买量预算' },
-        { num: 'AI 视频', text: '& Vibe Coding' },
+        { num: '双语沟通', text: '母语中文 · 英语自由' },
       ],
+      languages: '中国人 · 母语为中文 · 英语自由商务交流',
     },
     contact: {
       badge: '开启您的增长与商业化之旅',
@@ -408,7 +410,7 @@ export const dictionary = {
       subtitle: '直接通过微信或邮箱联系 Will Sun，或在线提交信息获取免费诊断评估。',
       wechatTitle: '微信直连',
       wechatDesc: '扫描或复制微信号，即刻沟通需求',
-      wechatId: 'WillSunGrowth',
+      wechatId: '591611431',
       emailTitle: '直连邮箱',
       emailDesc: '保证 12 小时内亲自回复',
       emailAddr: 'contact@willsun.agency',
@@ -418,7 +420,7 @@ export const dictionary = {
       websiteLabel: '网站或 App 链接',
       messageLabel: '目前面临的商业化痛点或增长目标',
       submitBtn: '提交诊断申请',
-      successMsg: '感谢提交！我们将在 12 小时内与您联系。',
+      successMsg: '感谢提交！您的项目诊断申请已直接发送给 Will Sun，我们将在 12 小时内亲自与您联系。',
     },
     footer: {
       rights: '保留所有权利。',

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { dictionary, Language } from '@/lib/dictionary';
-import { Award, Code2, LineChart, Video } from 'lucide-react';
+import { Award, Code2, LineChart, Video, Globe } from 'lucide-react';
 import { Logo } from '@/components/Logo';
 
 interface AboutProps {
@@ -46,6 +46,10 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
                 <div className="flex items-center space-x-2.5">
                   <Code2 className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
                   <span>Vibe Coding & Next.js Rapid Web/Tool Engineering</span>
+                </div>
+                <div className="flex items-center space-x-2.5 text-blue-600 dark:text-blue-400 font-bold pt-1 border-t border-slate-100 dark:border-slate-800/80">
+                  <Globe className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
+                  <span>{t.languages}</span>
                 </div>
               </div>
             </div>
