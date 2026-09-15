@@ -1,7 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
 import { JsonLd } from '@/components/JsonLd';
 
 const inter = Inter({
@@ -84,22 +83,24 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* Google tag (gtag.js) for GA4 and Google Search Console verification */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-1B29WEPTV9"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1B29WEPTV9');
+            `,
+          }}
+        />
         <JsonLd />
       </head>
       <body className={`${inter.className} bg-white text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white`}>
-        {/* Google tag (gtag.js) via Next.js Script component with lazyOnload */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-1B29WEPTV9"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-1B29WEPTV9');
-          `}
-        </Script>
         {children}
       </body>
     </html>
