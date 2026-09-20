@@ -33,6 +33,9 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             <Link href="/cases" className="hover:text-blue-400 dark:hover:text-blue-400 transition-colors">
               {navT.cases}
             </Link>
+            <Link href="/works" className="hover:text-blue-400 dark:hover:text-blue-400 transition-colors">
+              {navT.works}
+            </Link>
             <Link href="/pricing" className="hover:text-blue-400 dark:hover:text-blue-400 transition-colors">
               {navT.pricing}
             </Link>

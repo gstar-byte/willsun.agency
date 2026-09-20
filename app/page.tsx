@@ -8,6 +8,7 @@ import { Hero } from '@/components/Hero';
 import { TrustBar } from '@/components/TrustBar';
 import { Services } from '@/components/Services';
 import { Cases } from '@/components/Cases';
+import { Works } from '@/components/Works';
 import { Pricing } from '@/components/Pricing';
 import { About } from '@/components/About';
 import { ContactModal } from '@/components/ContactModal';
@@ -63,7 +64,21 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 5. Engagement Plans Summary */}
+      {/* 5. Featured Digital Assets & Works Portfolio */}
+      <div className="relative border-t border-slate-200 dark:border-slate-800">
+        <Works lang={lang} />
+        <div className="bg-white dark:bg-slate-950 pb-12 text-center transition-colors duration-300">
+          <Link
+            href="/works"
+            className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-xs font-bold text-slate-900 dark:text-white shadow-sm hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
+          >
+            <span>{t.works.exploreMore}</span>
+            <ArrowRight className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+          </Link>
+        </div>
+      </div>
+
+      {/* 6. Engagement Plans Summary */}
       <div className="relative">
         <Pricing lang={lang} onOpenContact={() => setContactOpen(true)} />
         <div className="bg-slate-50 dark:bg-slate-900/60 pb-12 text-center transition-colors duration-300">

@@ -95,7 +95,7 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
             </div>
 
             {/* Highlights Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               {t.highlights.map((item, idx) => (
                 <div
                   key={idx}
@@ -109,6 +109,72 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Incubated Digital Ecosystem Matrix */}
+            <div className="p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+              <div className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3 flex items-center justify-between">
+                <span>{lang === 'en' ? 'Digital Assets & Incubated Sister Sites' : '代表作品与孵化数字资产矩阵'}</span>
+                <a href="/works" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">
+                  {lang === 'en' ? 'View All Works →' : '进入作品展厅 →'}
+                </a>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs font-semibold">
+                <a
+                  href="https://cadguide.tools/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">CADGuide.tools</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
+                <a
+                  href="https://gstarcademy.com/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">GstarCademy</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
+                <a
+                  href="https://a11ykit.site/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">A11yKit.site</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
+                <a
+                  href="https://geokit.site/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">GeoKit.site</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
+                <a
+                  href="https://ramanamaharshi.space/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">RamanaMaharshi</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
+                <a
+                  href="https://chanzong.space/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">ChanZong.space</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

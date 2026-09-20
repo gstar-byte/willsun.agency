@@ -31,6 +31,14 @@ export const JsonLd: React.FC = () => {
           '@type': 'PostalAddress',
           'addressCountry': 'CN'
         },
+        'sameAs': [
+          'https://cadguide.tools',
+          'https://gstarcademy.com',
+          'https://a11ykit.site',
+          'https://geokit.site',
+          'https://ramanamaharshi.space',
+          'https://chanzong.space'
+        ],
         'hasOfferCatalog': {
           '@type': 'OfferCatalog',
           'name': 'Core Growth Services',
@@ -64,9 +72,9 @@ export const JsonLd: React.FC = () => {
       },
       {
         '@type': 'ItemList',
-        '@id': 'https://willsun.agency/#cases',
-        'name': 'Featured Digital Product Portfolio & Growth Case Studies',
-        'description': 'Real-world digital assets engineered and scaled by WillSun Agency',
+        '@id': 'https://willsun.agency/#works',
+        'name': 'Featured Digital Product Portfolio & Incubated Assets',
+        'description': 'Real-world digital assets and software portals engineered and scaled by WillSun Agency',
         'itemListElement': [
           {
             '@type': 'ListItem',
@@ -83,9 +91,9 @@ export const JsonLd: React.FC = () => {
             'position': 2,
             'item': {
               '@type': 'CreativeWork',
-              'name': 'A11yKit.site',
-              'url': 'https://a11ykit.site',
-              'description': 'WCAG 2.2 and EAA Compliance toolkit for international digital accessibility standards.'
+              'name': 'GstarCademy',
+              'url': 'https://gstarcademy.com',
+              'description': 'Global CAD/BIM education and training academy for professional designers and engineers.'
             }
           },
           {
@@ -93,9 +101,39 @@ export const JsonLd: React.FC = () => {
             'position': 3,
             'item': {
               '@type': 'CreativeWork',
+              'name': 'A11yKit.site',
+              'url': 'https://a11ykit.site',
+              'description': 'WCAG 2.2 and EAA Compliance toolkit for international digital accessibility standards.'
+            }
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'item': {
+              '@type': 'CreativeWork',
               'name': 'GeoKit.site',
               'url': 'https://geokit.site',
               'description': 'Generative Engine Optimization (GEO) and Prompt Engineering utility suite.'
+            }
+          },
+          {
+            '@type': 'ListItem',
+            'position': 5,
+            'item': {
+              '@type': 'CreativeWork',
+              'name': 'Ramana Maharshi Digital Space',
+              'url': 'https://ramanamaharshi.space',
+              'description': 'Digital archive and sanctuary for the teachings and Self-Enquiry philosophy of Sri Ramana Maharshi.'
+            }
+          },
+          {
+            '@type': 'ListItem',
+            'position': 6,
+            'item': {
+              '@type': 'CreativeWork',
+              'name': 'ChanZong Digital Archive',
+              'url': 'https://chanzong.space',
+              'description': 'Open digital repository preserving Chan (Zen) Buddhism lineage transmissions and Koan wisdom.'
             }
           }
         ]

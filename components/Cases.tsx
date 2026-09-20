@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { dictionary, Language } from '@/lib/dictionary';
-import { TrendingUp, CheckCircle } from 'lucide-react';
+import { TrendingUp, CheckCircle, ExternalLink, ArrowRight, ArrowUpRight } from 'lucide-react';
 
 interface CasesProps {
   lang: Language;
@@ -90,7 +91,7 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
                 </div>
 
                 {/* Metrics */}
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 mb-4">
                   {item.metrics.map((m, mIdx) => (
                     <div
                       key={mIdx}
@@ -101,9 +102,35 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
                     </div>
                   ))}
                 </div>
+
+                {item.id === 'cadguide' && (
+                  <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                    <span className="text-xs font-mono text-slate-500 dark:text-slate-400">cadguide.tools</span>
+                    <a
+                      href="https://cadguide.tools/"
+                      target="_blank"
+                      rel="noopener"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      <span>{lang === 'en' ? 'Live Project' : '查看线上项目'}</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Works Page Exploration Banner */}
+        <div className="mt-14 text-center">
+          <Link
+            href="/works"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg hover:scale-[1.02] transition-all"
+          >
+            <span>{lang === 'en' ? 'Explore More Incubated Digital Assets (Works)' : '探索更多代表作品与独立数字资产 (作品展厅)'}</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

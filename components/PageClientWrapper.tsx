@@ -5,6 +5,7 @@ import { Language, dictionary } from '@/lib/dictionary';
 import { Header } from '@/components/Header';
 import { Services } from '@/components/Services';
 import { Cases } from '@/components/Cases';
+import { Works } from '@/components/Works';
 import { Pricing } from '@/components/Pricing';
 import { About } from '@/components/About';
 import { ContactModal } from '@/components/ContactModal';
@@ -12,7 +13,7 @@ import { ContactForm } from '@/components/ContactForm';
 import { Footer } from '@/components/Footer';
 
 interface PageClientWrapperProps {
-  pageType: 'services' | 'cases' | 'pricing' | 'about' | 'contact';
+  pageType: 'services' | 'cases' | 'works' | 'pricing' | 'about' | 'contact';
 }
 
 export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }) => {
@@ -34,6 +35,12 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
           badge: t.cases.badge,
           title: t.cases.title,
           subtitle: t.cases.subtitle,
+        };
+      case 'works':
+        return {
+          badge: t.works.badge,
+          title: t.works.title,
+          subtitle: t.works.subtitle,
         };
       case 'pricing':
         return {
@@ -84,6 +91,7 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
         <Services lang={lang} onOpenContact={() => setContactOpen(true)} />
       )}
       {pageType === 'cases' && <Cases lang={lang} />}
+      {pageType === 'works' && <Works lang={lang} />}
       {pageType === 'pricing' && (
         <Pricing lang={lang} onOpenContact={() => setContactOpen(true)} />
       )}

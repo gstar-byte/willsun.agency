@@ -106,6 +106,14 @@ export const Header: React.FC<HeaderProps> = ({
               {t.cases}
             </Link>
             <Link
+              href="/works"
+              className={`transition-colors ${
+                isActive('/works') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
+              }`}
+            >
+              {t.works}
+            </Link>
+            <Link
               href="/pricing"
               className={`transition-colors ${
                 isActive('/pricing') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
@@ -234,6 +242,15 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               {t.cases}
+            </Link>
+            <Link
+              href="/works"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block font-semibold ${
+                isActive('/works') ? 'text-blue-600 font-bold' : 'text-slate-700 hover:text-blue-600'
+              }`}
+            >
+              {t.works}
             </Link>
             <Link
               href="/pricing"
