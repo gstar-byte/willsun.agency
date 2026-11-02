@@ -7,64 +7,72 @@ export const JsonLd: React.FC = () => {
       {
         '@type': 'ProfessionalService',
         '@id': 'https://willsun.agency/#organization',
-        'name': 'WillSun Agency | Global Growth & Commercialization Studio',
-        'alternateName': 'WillSun Growth Studio',
+        'name': 'WillSun Agency | Fractional Growth & AI-Native Technical SEO Consultancy',
+        'alternateName': 'Will Sun Growth Consultancy',
         'url': 'https://willsun.agency',
+        'email': 'will@willsun.agency',
         'logo': 'https://willsun.agency/icon.svg',
         'image': 'https://willsun.agency/icon.svg',
-        'description': 'Executive Cross-Border SaaS, E-Commerce, and Industrial Exporter Growth Studio with 15+ Years Mastery in SEO, GEO AI Search Optimization, and Monetization Scaling.',
+        'description': 'Boutique technical growth consultancy led by Will Sun with 16+ years hands-on experience in Technical SEO, Generative Engine Optimization (GEO), WCAG 2.2 accessibility compliance, Google Ads, and SaaS/App monetization.',
         'founder': {
           '@type': 'Person',
           'name': 'Will Sun',
-          'jobTitle': 'Founder & Chief Growth Officer',
+          'jobTitle': 'Fractional Growth Marketing Manager & AI-Native Technical SEO Engineer',
+          'email': 'will@willsun.agency',
+          'alumniOf': {
+            '@type': 'CollegeOrUniversity',
+            'name': 'Beijing Foreign Studies University (BFSU)'
+          },
           'knowsAbout': [
-            'Cross-Border E-Commerce Growth',
-            'SaaS Commercialization Architecture',
-            'Search Engine Optimization (SEO)',
-            'Generative Engine Optimization (GEO)',
-            'Performance Marketing & Monetization'
+            'Technical SEO & Programmatic SEO',
+            'Generative Engine Optimization (GEO / AEO)',
+            'WCAG 2.2 & ADA Web Accessibility Auditing',
+            'Google Ads & Cross-Border DTC Growth',
+            'SaaS & Mobile App Subscription Monetization',
+            'GA4 & Google Search Console Python Automation'
           ]
         },
         'knowsLanguage': ['en', 'zh-CN'],
         'priceRange': '$$$',
         'address': {
           '@type': 'PostalAddress',
+          'addressLocality': 'Beijing',
           'addressCountry': 'CN'
         },
         'sameAs': [
+          'https://geokit.site',
+          'https://a11ykit.site',
           'https://cadguide.tools',
           'https://gstarcademy.com',
-          'https://a11ykit.site',
-          'https://geokit.site',
           'https://ramanamaharshi.space',
           'https://chanzong.space'
         ],
         'hasOfferCatalog': {
           '@type': 'OfferCatalog',
-          'name': 'Core Growth Services',
+          'name': 'Fractional Growth & Technical SEO Services',
           'itemListElement': [
             {
               '@type': 'Offer',
               'itemOffered': {
                 '@type': 'Service',
-                'name': 'Global SEO & GEO AI Search Infrastructure',
-                'description': 'Dominate Google organic search and Perplexity/ChatGPT AI answers with schema-first technical architecture.'
+                'name': 'GEO, Technical SEO & WCAG 2.2 Audit Sprint ($499)',
+                'description': 'Comprehensive technical SEO, AI search citation readiness (GeoKit.site), and WCAG 2.2 / ADA compliance (A11yKit.site) audit with a 90-day roadmap.'
               }
             },
             {
               '@type': 'Offer',
               'itemOffered': {
                 '@type': 'Service',
-                'name': 'Cross-Border SaaS & E-Commerce Commercialization',
-                'description': 'End-to-end monetization architecture, pricing strategy, and multi-channel acquisition funnels.'
+                'name': 'Fractional SEO & Growth Consultant Retainer ($2,000/mo)',
+                'description': '15–20 hrs/week dedicated senior execution across Technical/Programmatic SEO, GEO entity schema, Google Ads, and Python GA4/GSC reporting.'
               }
             },
             {
               '@type': 'Offer',
               'itemOffered': {
                 '@type': 'Service',
-                'name': 'Performance Ad Scaling & ROI Optimization',
-                'description': 'Data-driven paid media execution across Google Ads, Meta, and niche B2B advertising networks.'
+                'name': 'AI-Native Growth & Vibe Coding Partner ($3,500+/mo)',
+                'description': 'Full-stack fractional growth leadership, custom interactive web tool development (Next.js), subscription CRO, and agency white-label delivery.'
               }
             }
           ]
@@ -73,37 +81,40 @@ export const JsonLd: React.FC = () => {
       {
         '@type': 'ItemList',
         '@id': 'https://willsun.agency/#works',
-        'name': 'Featured Digital Product Portfolio & Incubated Assets',
-        'description': 'Real-world digital assets and software portals engineered and scaled by WillSun Agency',
+        'name': 'Featured AI-Native SaaS Audit Engines & Programmatic Portals',
+        'description': 'Live web tools and audit platforms independently architected and scaled by Will Sun',
         'itemListElement': [
           {
             '@type': 'ListItem',
             'position': 1,
             'item': {
-              '@type': 'CreativeWork',
-              'name': 'CADGuide.tools',
-              'url': 'https://cadguide.tools',
-              'description': 'CAD & BIM Engineering Portal featuring 45+ interactive calculation tools and software comparison matrix.'
+              '@type': 'SoftwareApplication',
+              'name': 'GeoKit.site',
+              'url': 'https://geokit.site',
+              'applicationCategory': 'BusinessApplication',
+              'description': 'Automated Generative Engine Optimization (GEO) & AI search readiness auditing platform for ChatGPT, Perplexity, and Google AI Overviews.'
             }
           },
           {
             '@type': 'ListItem',
             'position': 2,
             'item': {
-              '@type': 'CreativeWork',
-              'name': 'GstarCademy',
-              'url': 'https://gstarcademy.com',
-              'description': 'Global CAD/BIM education and training academy for professional designers and engineers.'
+              '@type': 'SoftwareApplication',
+              'name': 'A11yKit.site',
+              'url': 'https://a11ykit.site',
+              'applicationCategory': 'DeveloperApplication',
+              'description': 'Automated Web Accessibility (WCAG 2.2, ADA & European Accessibility Act) scanning and remediation toolkit.'
             }
           },
           {
             '@type': 'ListItem',
             'position': 3,
             'item': {
-              '@type': 'CreativeWork',
-              'name': 'A11yKit.site',
-              'url': 'https://a11ykit.site',
-              'description': 'WCAG 2.2 and EAA Compliance toolkit for international digital accessibility standards.'
+              '@type': 'WebApplication',
+              'name': 'CADGuide.tools',
+              'url': 'https://cadguide.tools',
+              'applicationCategory': 'DesignApplication',
+              'description': 'Programmatic SEO & interactive utility hub for global CAD engineers featuring 45+ calculation tools and 2,500+ monthly organic visits.'
             }
           },
           {
@@ -111,51 +122,9 @@ export const JsonLd: React.FC = () => {
             'position': 4,
             'item': {
               '@type': 'CreativeWork',
-              'name': 'GeoKit.site',
-              'url': 'https://geokit.site',
-              'description': 'Generative Engine Optimization (GEO) and Prompt Engineering utility suite.'
-            }
-          },
-          {
-            '@type': 'ListItem',
-            'position': 5,
-            'item': {
-              '@type': 'CreativeWork',
-              'name': 'Ramana Maharshi Digital Space',
-              'url': 'https://ramanamaharshi.space',
-              'description': 'Digital archive and sanctuary for the teachings and Self-Enquiry philosophy of Sri Ramana Maharshi.'
-            }
-          },
-          {
-            '@type': 'ListItem',
-            'position': 6,
-            'item': {
-              '@type': 'CreativeWork',
-              'name': 'ChanZong Digital Archive',
-              'url': 'https://chanzong.space',
-              'description': 'Open digital repository preserving Chan (Zen) Buddhism lineage transmissions and Koan wisdom.'
-            }
-          }
-        ]
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': 'https://willsun.agency/#faq',
-        'mainEntity': [
-          {
-            '@type': 'Question',
-            'name': 'What is Generative Engine Optimization (GEO)?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Generative Engine Optimization (GEO) is the strategy of optimizing digital content and technical architecture so AI search engines like SearchGPT, Perplexity, Claude, and Google AI Overviews cite and recommend your brand.'
-            }
-          },
-          {
-            '@type': 'Question',
-            'name': 'How does WillSun Agency accelerate SaaS & Cross-Border E-Commerce growth?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'We leverage 15+ years of hands-on experience combining technical SEO, GEO AI positioning, monetization funnel refactoring, and AI-assisted creative production to deliver measurable revenue growth.'
+              'name': 'GstarCademy',
+              'url': 'https://gstarcademy.com',
+              'description': 'Global CAD/BIM education and product-led SEO training academy for professional designers and engineers.'
             }
           }
         ]

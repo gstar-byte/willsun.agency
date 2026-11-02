@@ -186,8 +186,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, onSuccess }) => 
 
       <div className="text-center text-[11px] text-slate-500 dark:text-slate-400">
         {lang === 'zh'
-          ? '🔒 严格保密 · 留言直达站长 QQ 邮箱 · 承诺 12 小时内亲自回复'
-          : '🔒 100% Confidential · Direct to Founder Inbox · 12h Fast Turnaround'}
+          ? '🔒 严格保密 · 直达 will@willsun.agency · 承诺 12 小时内由 Will Sun 亲自回复'
+          : '🔒 100% Confidential · Direct to will@willsun.agency · 12h Fast Turnaround'}
       </div>
     </form>
   );

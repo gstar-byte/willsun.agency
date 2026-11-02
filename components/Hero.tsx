@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          {/* Top 17 Yrs Credibility Badge */}
+          {/* Top Credibility Badge */}
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50/80 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 shadow-sm mb-8">
             <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-pulse" />
             <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-800 dark:text-blue-300">
@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
             </span>
           </div>
 
-          {/* Main Title - Restored to Accelerate... */}
+          {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.15] mb-6">
             {t.title}{' '}
             <span className="text-gradient-blue block sm:inline">
@@ -53,27 +53,29 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
             </button>
 
             <a
-              href="#contact"
+              href="/Will_Sun_Remote_CV_2026.pdf"
+              target="_blank"
+              rel="noopener"
               className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm sm:text-base text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-blue-500 transition-all flex items-center justify-center space-x-2 shadow-sm"
             >
-              <FileText className="w-4.5 h-4.5 text-slate-600 dark:text-slate-400" />
+              <FileText className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
               <span>{t.ctaSecondary}</span>
             </a>
           </div>
 
           {/* Feature Bullets */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-slate-700 dark:text-slate-200 mb-16">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 mb-16">
             <div className="flex items-center space-x-2 bg-white dark:bg-slate-900 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
               <ShieldCheck className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
-              <span>7 Yrs Monetization Focus</span>
+              <span>{lang === 'en' ? '15–25 hrs/wk Fractional & Retainer Ready' : '每周 15–25 小时远程兼职 / Retainer'}</span>
             </div>
             <div className="flex items-center space-x-2 bg-white dark:bg-slate-900 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
               <Zap className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
-              <span>AI Video & Image Creation</span>
+              <span>{lang === 'en' ? 'GeoKit & A11yKit Proprietary Audit Engines' : '自研 GeoKit & A11yKit 自动化诊断引擎'}</span>
             </div>
             <div className="flex items-center space-x-2 bg-white dark:bg-slate-900 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
               <CheckCircle2 className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
-              <span>Vibe Coding Acceleration</span>
+              <span>{lang === 'en' ? 'BFSU Business English (TEM-8 / CATTI-3)' : '北外商务英语专八 (TEM-8) 零障碍沟通'}</span>
             </div>
           </div>
         </div>

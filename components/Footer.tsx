@@ -47,9 +47,18 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             </Link>
           </div>
 
-          {/* Copyright */}
-          <div className="text-xs sm:text-sm text-slate-400 text-center md:text-right">
-            © {new Date().getFullYear()} WillSun.agency. {t.rights}
+          {/* Copyright & Direct Email */}
+          <div className="text-xs sm:text-sm text-slate-400 text-center md:text-right space-y-1">
+            <div>
+              <a href="mailto:will@willsun.agency" className="text-blue-400 hover:underline font-semibold">
+                will@willsun.agency
+              </a>
+              {' · '}
+              <a href="/Will_Sun_Remote_CV_2026.pdf" target="_blank" rel="noopener" className="text-slate-300 hover:text-white underline">
+                2026 CV (PDF)
+              </a>
+            </div>
+            <div>© {new Date().getFullYear()} WillSun.agency. {t.rights}</div>
           </div>
         </div>
       </div>

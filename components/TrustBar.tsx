@@ -12,11 +12,11 @@ export const TrustBar: React.FC<TrustBarProps> = ({ lang }) => {
   const t = dictionary[lang].trust;
 
   const logos = [
-    { icon: Rocket, label: 'SaaS Monetization' },
-    { icon: Globe2, label: 'Cross-Border E-Commerce' },
-    { icon: ShieldCheck, label: 'B2B Industrial Exports' },
-    { icon: Trophy, label: 'Niche Engineering Portals' },
-    { icon: Zap, label: 'Mobile Utility Apps' },
+    { icon: Globe2, label: 'DWG FastView (30k+ PC DAU)' },
+    { icon: Trophy, label: 'KingCamp Outdoors (DTC SEO & Ads)' },
+    { icon: Rocket, label: 'Yoybuy (Cross-Border E-Commerce)' },
+    { icon: Zap, label: 'Clash of Kings (Global Affiliate UA)' },
+    { icon: ShieldCheck, label: 'PostPony (US Logistics SaaS)' },
   ];
 
   return (
@@ -26,7 +26,7 @@ export const TrustBar: React.FC<TrustBarProps> = ({ lang }) => {
           {t.heading}
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
           {logos.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -34,8 +34,8 @@ export const TrustBar: React.FC<TrustBarProps> = ({ lang }) => {
                 key={idx}
                 className="flex items-center space-x-2.5 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
-                <Icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <span className="text-sm font-semibold tracking-wide">
+                <Icon className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
+                <span className="text-xs sm:text-sm font-semibold tracking-wide">
                   {item.label}
                 </span>
               </div>

@@ -1,32 +1,26 @@
-# WillSun Agency
+# Will Sun | WillSun Agency
 
-> WillSun Agency is a premier global growth and commercialization studio founded by Will Sun, accelerating cross-border SaaS, global e-commerce, and industrial exporters with 17+ years of battle-tested mastery in SEO, GEO (Generative Engine Optimization), and monetization architecture.
+> Will Sun is a Fractional Growth Marketing Manager, Technical SEO Consultant, and AI-Native Growth Engineer with 16+ years of hands-on experience scaling global organic traffic, paid acquisition, and full-funnel monetization across B2B/B2C SaaS, cross-border DTC e-commerce, and mobile/PC applications.
 
-## Overview
+## Overview & Contact
 - Website: https://willsun.agency
-- Founder: Will Sun (17+ years experience: 10 years traffic growth + 7 years commercial monetization)
-- Core Expertise: SaaS MRR Monetization, GEO AI Search Citation, Global Technical SEO, High-Converting Performance Ads, AI Visual Design, and Vibe Coding Rapid Development.
+- Principal Consultant: Will Sun (B.A. in Business English, Beijing Foreign Studies University, TEM-8 & CATTI-3 certified)
+- Email: will@willsun.agency
+- 2026 Resume / CV (PDF): https://willsun.agency/Will_Sun_Remote_CV_2026.pdf
+- Availability: Available for Remote Part-Time, Fractional Retainer, or Agency White-Label Engagements (15–25 hrs/week, flexible overlap with US, UK, EU & AU time zones).
 
-## Core Capabilities & Services
-- [Cross-Border SaaS & E-Commerce Monetization](https://willsun.agency/services): Full-funnel monetization strategy, pricing model design, checkout flow optimization, LTV/CAC ratio scaling, and recurring revenue architecture.
-- [Global SEO & GEO (AI Search Citation) Engine](https://willsun.agency/services): Entity graph optimization, high-intent keyword targeting, and authority citations across Perplexity, ChatGPT, Claude, and Google Search.
-- [AI-Powered Precision Performance Ads](https://willsun.agency/services): Multi-channel Google & Meta campaigns with strict CAC/ROAS controls and rapid AI creative iteration.
-- [AI Visual Design & Motion/Video Creative](https://willsun.agency/services): Senior in-house creative production using Midjourney, Runway, and generative AI tools for high-converting video and graphic assets.
-- [Vibe Coding Rapid Web & Tool Development](https://willsun.agency/services): High-speed engineering of Next.js web applications, interactive tools, and lightweight landing pages built for instant conversion.
+## Proprietary Live Tools & Portfolio (Built by Will Sun)
+- [GeoKit (geokit.site)](https://geokit.site): Automated Generative Engine Optimization (GEO) & AI search readiness auditing platform helping brands optimize visibility across ChatGPT, Perplexity, Claude, and Google AI Overviews.
+- [A11yKit (a11ykit.site)](https://a11ykit.site): Automated Web Accessibility (WCAG 2.2 / US ADA / EU EAA compliance) scanning and code-level remediation toolkit for Western e-commerce and SaaS websites.
+- [CADGuide Tools (cadguide.tools)](https://cadguide.tools): Programmatic SEO & interactive utility hub featuring 45+ CAD/BIM engineering calculators; scaled from 0 to 2,500+ monthly organic visits purely via long-tail technical search intent.
+- [GstarCademy (gstarcademy.com)](https://gstarcademy.com): Global product-led SEO educational portal for CAD & BIM engineers.
 
-## Featured Case Studies
-- [Niche Portal & Tooling](https://willsun.agency/cases): Grew from 0 to 1M+ organic monthly visits with a 300% ad ARPU increase.
-- [Cross-Border E-Commerce](https://willsun.agency/cases): Lowered customer acquisition costs by 45% with a 4.8x sustained ROAS across EU & US markets.
-- [B2B Industrial Exports](https://willsun.agency/cases): Established multi-lingual inbound SEO funnels producing 150+ monthly high-value enterprise RFQs.
-- [Mobile & Utility Apps](https://willsun.agency/cases): Engineered programmatic acquisition funnels scaling to 500K+ organic downloads.
+## Verified Client & In-House Track Record
+- **DWG FastView (Overseas Growth & Monetization Manager, 2019–Present)**: Manage 12+ multi-language official websites (`en.dwgfastview.com`, `kr.dwgfastview.com`, etc.) and 27 overseas PC distribution channels (sustaining 30,000+ overseas PC DAU). Own global subscription monetization across Google Play, Apple App Store, and 2Checkout plus Ad Mediation, backed by automated Python GA4/GSC data pipelines.
+- **KingCamp Outdoors (`kingcampoutdoors.com`) & Yoybuy (`yoybuy.com`)**: Served as Fractional Technical SEO & Google Ads Consultant (2021–2023, re-engaged by former employer Yoybuy), resolving technical SEO bottlenecks, restructuring high-intent keyword taxonomy, and scaling Google Search/Shopping ROAS across North America and Europe.
+- **PostPony US Logistics SaaS, Clash of Kings (Elex Wireless) & Yoybuy**: Led digital growth at PostPony (20 consecutive months of GMV growth via Google/FB Ads & Dealmoon); managed global affiliate networks (ShareASale, Webgains) and anti-fraud media buying for top-grossing mobile strategy game *Clash of Kings*.
 
-## Engagement Plans & Pricing
-- [Growth Sprint ($2,499 / Sprint)](https://willsun.agency/pricing): Full-funnel commercial audit, high-intent keyword roadmap, conversion rate overhaul, and actionable execution blueprint.
-- [Scale & Monetize ($4,999 / Month)](https://willsun.agency/pricing): End-to-end SEO & GEO citation management, continuous ad optimization, weekly creative refreshes, and dedicated growth consultation.
-- [Enterprise Custom Partnership (Custom Pricing)](https://willsun.agency/pricing): Embedded growth strategist, bespoke Vibe Coding engineering, full-funnel CRO, and multi-market scale.
-
-## About the Founder
-- [Will Sun Bio & Track Record](https://willsun.agency/about): 17+ years spanning 10 years of top-tier traffic generation, 7 years of deep commercial monetization, over $10M+ in ad spend managed. Native Chinese speaker fluent in English, bridging cross-border SaaS/e-commerce founders with global revenue scale.
-
-## Direct Contact & Consultation
-- [Consultation & Audit Request](https://willsun.agency/contact): Request a free growth audit and custom commercialization blueprint via our secure online inquiry form.
+## Engagement Models & Pricing
+- [GEO, Technical SEO & A11y Audit Sprint ($499 One-Time)](https://willsun.agency/pricing): Full Technical SEO audit, GeoKit AI citation readiness report, A11yKit WCAG 2.2 compliance scan, Google Ads review, and 60-min 1-on-1 roadmap call.
+- [Fractional SEO & Growth Consultant ($2,000 / Month)](https://willsun.agency/pricing): 15–20 hrs/week dedicated execution across Technical/Programmatic SEO, GEO entity schema, Google Ads, and automated Python GA4/GSC reporting.
+- [AI-Native Growth & Vibe Coding Partner ($3,500+ / Month)](https://willsun.agency/pricing): Full-stack fractional growth leadership, custom Engineering-as-Marketing interactive web tools (Next.js), subscription CRO, and white-label technical delivery for Western agencies.

@@ -31,6 +31,9 @@ next-env.d.ts
 
 # temp & session
 .edge-session
+.remote-platforms-session/
+__pycache__/
+outreach_reports/
 *.log
 
 .vercel

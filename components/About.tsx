@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { dictionary, Language } from '@/lib/dictionary';
-import { Award, Code2, LineChart, Video, Globe } from 'lucide-react';
+import { Award, Code2, LineChart, ShieldCheck, Globe, Mail, FileText } from 'lucide-react';
 import { Logo } from '@/components/Logo';
 
 interface AboutProps {
@@ -21,41 +21,64 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
             <div className="bg-glass-card-light dark:bg-slate-900 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 relative group overflow-hidden shadow-sm">
               <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl" />
 
-              <div className="mb-6">
-                <Logo size={44} />
+              <div className="mb-6 flex items-center space-x-4">
+                <img
+                  src="/will-sun-avatar.jpg"
+                  alt="Will Sun - Fractional Growth & Technical SEO Consultant"
+                  className="w-16 h-16 rounded-2xl object-cover border-2 border-blue-500/40 shadow-md"
+                />
+                <div>
+                  <h3 className="text-2xl font-black text-slate-900 dark:text-white leading-tight">Will Sun</h3>
+                  <p className="text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mt-0.5">
+                    Fractional Growth &amp; Technical SEO Engineer
+                  </p>
+                </div>
               </div>
-
-              <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-1">Will Sun</h3>
-              <p className="text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-6">
-                Founder & Lead Commercialization Strategist
-              </p>
 
               <div className="space-y-3 pt-6 border-t border-slate-100 dark:border-slate-800 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">
                 <div className="flex items-center space-x-2.5">
                   <Award className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                  <span>17+ Yrs Cross-Border Growth & Monetization</span>
+                  <span>16+ Yrs Global SaaS, DTC & App Monetization</span>
                 </div>
                 <div className="flex items-center space-x-2.5">
                   <LineChart className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                  <span>10 Yrs Traffic Growth + 7 Yrs Revenue Monetization</span>
+                  <span>DWG FastView (30k+ PC DAU), KingCamp & Yoybuy</span>
                 </div>
                 <div className="flex items-center space-x-2.5">
-                  <Video className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                  <span>In-House AI Visual & Video Design Capabilities</span>
+                  <ShieldCheck className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
+                  <span>Founder of GeoKit.site, A11yKit.site & CADGuide.tools</span>
                 </div>
                 <div className="flex items-center space-x-2.5">
                   <Code2 className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                  <span>Vibe Coding & Next.js Rapid Web/Tool Engineering</span>
+                  <span>Python GA4/GSC Data Pipelines & Next.js Vibe Coding</span>
                 </div>
-                <div className="flex items-center space-x-2.5 text-blue-600 dark:text-blue-400 font-bold pt-1 border-t border-slate-100 dark:border-slate-800/80">
+                <div className="flex items-center space-x-2.5 text-blue-600 dark:text-blue-400 font-bold pt-2 border-t border-slate-100 dark:border-slate-800/80">
                   <Globe className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
                   <span>{t.languages}</span>
                 </div>
+                <div className="flex items-center space-x-2.5 pt-1">
+                  <Mail className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
+                  <a href="mailto:will@willsun.agency" className="hover:underline text-slate-900 dark:text-white font-bold">
+                    will@willsun.agency
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="/Will_Sun_Remote_CV_2026.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-blue-500 transition-all shadow-sm"
+                >
+                  <FileText className="w-4 h-4 text-blue-400 dark:text-blue-200" />
+                  <span>{lang === 'en' ? 'Download 2026 CV (PDF)' : '下载 2026 英文简历 (PDF)'}</span>
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Text Bio & 17-Year Timeline */}
+          {/* Right Column - Text Bio & 16-Year Timeline */}
           <div className="lg:col-span-7">
             <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 shadow-sm">
               {t.badge}
@@ -73,7 +96,7 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
               {t.p2}
             </p>
 
-            {/* 17-Year Milestone Timeline */}
+            {/* 16-Year Milestone Timeline */}
             <div className="mb-10">
               <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">
                 {t.timelineTitle}
@@ -114,12 +137,30 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
             {/* Incubated Digital Ecosystem Matrix */}
             <div className="p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
               <div className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3 flex items-center justify-between">
-                <span>{lang === 'en' ? 'Digital Assets & Incubated Sister Sites' : '代表作品与孵化数字资产矩阵'}</span>
+                <span>{lang === 'en' ? 'Live Proprietary Audit Engines & Sister Portals' : '自研在线审计引擎与数字资产矩阵'}</span>
                 <a href="/works" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">
-                  {lang === 'en' ? 'View All Works →' : '进入作品展厅 →'}
+                  {lang === 'en' ? 'View All Live Tools →' : '查看全部工具 →'}
                 </a>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs font-semibold">
+                <a
+                  href="https://geokit.site/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">GeoKit.site (GEO)</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
+                <a
+                  href="https://a11ykit.site/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">A11yKit.site (WCAG)</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
                 <a
                   href="https://cadguide.tools/"
                   target="_blank"
@@ -139,24 +180,6 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
                   <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                 </a>
                 <a
-                  href="https://a11ykit.site/"
-                  target="_blank"
-                  rel="noopener"
-                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
-                >
-                  <span className="truncate">A11yKit.site</span>
-                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
-                </a>
-                <a
-                  href="https://geokit.site/"
-                  target="_blank"
-                  rel="noopener"
-                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
-                >
-                  <span className="truncate">GeoKit.site</span>
-                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
-                </a>
-                <a
                   href="https://ramanamaharshi.space/"
                   target="_blank"
                   rel="noopener"
@@ -172,6 +195,33 @@ export const About: React.FC<AboutProps> = ({ lang }) => {
                   className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                 >
                   <span className="truncate">ChanZong.space</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
+                <a
+                  href="https://www.abletarget.com/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">AbleTarget (Client)</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
+                <a
+                  href="https://www.unircable.com/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">UnirCable (Client)</span>
+                  <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                </a>
+                <a
+                  href="https://www.kingcampoutdoors.com/"
+                  target="_blank"
+                  rel="noopener"
+                  className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                >
+                  <span className="truncate">KingCamp (Client)</span>
                   <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                 </a>
               </div>
