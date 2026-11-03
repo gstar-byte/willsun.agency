@@ -4,13 +4,13 @@ export const dictionary = {
   en: {
     nav: {
       home: 'Home',
-      services: 'Capabilities',
-      cases: 'Track Record',
-      works: 'Live Tools',
-      pricing: 'Retainer Plans',
-      about: 'About Will',
+      services: 'Services',
+      cases: 'Cases',
+      works: 'Works',
+      pricing: 'Pricing',
+      about: 'About',
       contact: 'Contact',
-      cta: 'Free GEO & SEO Audit',
+      cta: 'Free Audit',
     },
     hero: {
       badge: 'FRACTIONAL GROWTH CONSULTANT • TECHNICAL SEO & AI-NATIVE ENGINEER',
@@ -327,13 +327,13 @@ export const dictionary = {
   zh: {
     nav: {
       home: '首页',
-      services: '核心能力',
-      cases: '实战履历',
-      works: '自研工具矩阵',
-      pricing: '兼职/顾问方案',
-      about: '关于 Will',
-      contact: '直接联系',
-      cta: '免费 GEO & SEO 诊断',
+      services: '服务',
+      cases: '案例',
+      works: '作品',
+      pricing: '报价',
+      about: '关于',
+      contact: '联系',
+      cta: '免费诊断',
     },
     hero: {
       badge: '远程兼职增长顾问 (Fractional Growth) • 技术 SEO 与 AI 全栈增长工程师',
