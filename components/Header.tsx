@@ -80,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({
           </Link>
 
           {/* Multi-Page Navigation with Home & Works */}
-          <nav className="hidden md:flex items-center space-x-7 text-sm font-semibold text-slate-700 dark:text-slate-300">
+          <nav className="hidden md:flex items-center space-x-8 text-base lg:text-[17px] font-bold text-slate-700 dark:text-slate-200">
             <Link
               href="/"
               className={`transition-colors ${
@@ -215,7 +215,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pt-4 pb-6 border-t border-slate-200 bg-white/95 backdrop-blur-lg rounded-2xl px-6 space-y-4 shadow-xl animate-fade-in border border-slate-200">
+          <div className="md:hidden mt-4 pt-4 pb-6 border-t border-slate-200 bg-white/95 backdrop-blur-lg rounded-2xl px-6 space-y-4 shadow-xl animate-fade-in border border-slate-200 text-base">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
