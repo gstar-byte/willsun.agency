@@ -47,6 +47,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, initialWebsite =
         body: JSON.stringify({
           _subject: `【WillSun Agency】来自 ${formData.name} 的出海增长诊断咨询`,
           _replyto: formData.email,
+          _cc: 'will@willsun.agency',
           '客户姓名 / Name': formData.name,
           '联系邮箱 / Email': formData.email,
           '网站链接 / Website': formData.website || '未提供',
