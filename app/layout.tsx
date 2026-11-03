@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { JsonLd } from '@/components/JsonLd';
+import { EXP_YEARS } from '@/lib/dictionary';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,10 +15,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://willsun.agency'),
   title: {
-    default: 'Will Sun | Fractional Growth Consultant, Technical SEO & AI-Native Engineer',
+    default: 'Will Sun | Fractional Growth Consultant • Web Building, Google Ads, GEO & Monetization',
     template: '%s | WillSun Agency',
   },
-  description: '16+ years hands-on global growth, Technical SEO, GEO (AI Search Citations), WCAG 2.2 compliance, and full-funnel monetization for SaaS, Apps & DTC brands (DWG FastView, KingCamp, Yoybuy). Creator of GeoKit.site, A11yKit.site & CADGuide.tools.',
+  description: `${EXP_YEARS}+ years hands-on experience building high-converting websites, scaling global traffic (Google Ads, GEO & SEO), and driving revenue for DWG FastView (1.5M+ DAU), KingCamp & Yoybuy. Creator of GeoKit.site, A11yKit.site & CADGuide.tools.`,
   keywords: [
     'Fractional Growth Consultant',
     'Technical SEO Consultant',
@@ -45,8 +46,8 @@ export const metadata: Metadata = {
     canonical: 'https://willsun.agency',
   },
   openGraph: {
-    title: 'Will Sun | Fractional Growth Consultant & AI-Native Technical SEO Engineer',
-    description: '16+ years scaling global organic search, paid acquisition & subscription monetization (DWG FastView, KingCamp, Yoybuy). Founder of GeoKit.site, A11yKit.site & CADGuide.tools.',
+    title: 'Will Sun | Fractional Growth Consultant • Web Building, Google Ads, GEO & Monetization',
+    description: `${EXP_YEARS}+ years scaling global website traffic, paid acquisition & subscription monetization (DWG FastView 1.5M+ DAU, KingCamp, Yoybuy). Founder of GeoKit.site, A11yKit.site & CADGuide.tools.`,
     url: 'https://willsun.agency',
     siteName: 'WillSun Agency',
     locale: 'en_US',
@@ -54,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Will Sun | Fractional Growth & AI-Native Technical SEO Consultant',
-    description: 'Scale your SaaS & DTC brand with 16+ years of Technical SEO, GEO AI Citations, Google Ads, and Vibe Coding engineering.',
+    title: 'Will Sun | Fractional Growth • Web Building, Google Ads, GEO & Monetization',
+    description: `Scale your SaaS & DTC brand with ${EXP_YEARS}+ years of Website Building, Google Ads, GEO AI Citations, and hands-on monetization execution.`,
     creator: '@WillSunAgency',
   },
   robots: {

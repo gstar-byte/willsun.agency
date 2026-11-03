@@ -6,9 +6,10 @@ import { ExternalLink, Sparkles, Globe, ArrowUpRight } from 'lucide-react';
 
 interface WorksProps {
   lang: Language;
+  compact?: boolean;
 }
 
-export const Works: React.FC<WorksProps> = ({ lang }) => {
+export const Works: React.FC<WorksProps> = ({ lang, compact = false }) => {
   const t = dictionary[lang].works;
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
@@ -32,22 +33,24 @@ export const Works: React.FC<WorksProps> = ({ lang }) => {
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {t.categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                activeCategory === cat
-                  ? 'bg-slate-900 dark:bg-blue-600 text-white shadow-md font-bold'
-                  : 'bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
-              }`}
-            >
-              {cat === 'All' ? (lang === 'en' ? 'All Digital Assets' : '全部代表作品') : cat}
-            </button>
-          ))}
-        </div>
+        {/* Category Filters (Shown on Full Works Page) */}
+        {!compact && (
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+            {t.categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+                  activeCategory === cat
+                    ? 'bg-slate-900 dark:bg-blue-600 text-white shadow-md font-bold'
+                    : 'bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
+                }`}
+              >
+                {cat === 'All' ? (lang === 'en' ? 'All Digital Assets' : '全部代表作品') : cat}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Works Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -92,16 +95,18 @@ export const Works: React.FC<WorksProps> = ({ lang }) => {
               </div>
 
               <div>
-                {/* Result Highlights */}
-                <div className="p-3.5 rounded-xl bg-slate-900 dark:bg-slate-950 border border-slate-800 text-white mb-5 shadow-inner">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-blue-400 mb-1 flex items-center gap-1">
-                    <Sparkles className="w-3 h-3" />
-                    <span>{lang === 'en' ? 'Asset Impact' : '核心成果亮点'}</span>
+                {/* Result Highlights (Shown on Full Works Page) */}
+                {!compact && (
+                  <div className="p-3.5 rounded-xl bg-slate-900 dark:bg-slate-950 border border-slate-800 text-white mb-5 shadow-inner">
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-blue-400 mb-1 flex items-center gap-1">
+                      <Sparkles className="w-3 h-3" />
+                      <span>{lang === 'en' ? 'Asset Impact' : '核心成果亮点'}</span>
+                    </div>
+                    <div className="text-xs sm:text-sm font-bold text-slate-100 leading-snug">
+                      {item.result}
+                    </div>
                   </div>
-                  <div className="text-xs sm:text-sm font-bold text-slate-100 leading-snug">
-                    {item.result}
-                  </div>
-                </div>
+                )}
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1.5 mb-6">

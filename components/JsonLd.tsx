@@ -1,4 +1,5 @@
 import React from 'react';
+import { EXP_YEARS } from '@/lib/dictionary';
 
 export const JsonLd: React.FC = () => {
   const schemaData = {
@@ -7,13 +8,13 @@ export const JsonLd: React.FC = () => {
       {
         '@type': 'ProfessionalService',
         '@id': 'https://willsun.agency/#organization',
-        'name': 'WillSun Agency | Fractional Growth & AI-Native Technical SEO Consultancy',
+        'name': 'WillSun Agency | Fractional Growth & Full-Stack Growth Consultancy',
         'alternateName': 'Will Sun Growth Consultancy',
         'url': 'https://willsun.agency',
         'email': 'will@willsun.agency',
         'logo': 'https://willsun.agency/icon.svg',
         'image': 'https://willsun.agency/icon.svg',
-        'description': 'Boutique technical growth consultancy led by Will Sun with 16+ years hands-on experience in Technical SEO, Generative Engine Optimization (GEO), WCAG 2.2 accessibility compliance, Google Ads, and SaaS/App monetization.',
+        'description': `Boutique growth consultancy led by Will Sun with ${EXP_YEARS}+ years hands-on experience in Website Building, Google Ads, Generative Engine Optimization (GEO), SEO, and SaaS/App monetization.`,
         'founder': {
           '@type': 'Person',
           'name': 'Will Sun',

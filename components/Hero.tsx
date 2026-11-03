@@ -1,16 +1,22 @@
 'use client';
 
-import React from 'react';
-import { ArrowRight, Sparkles, MessageCircle, FileText, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Sparkles, Globe, FileText, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
 import { dictionary, Language } from '@/lib/dictionary';
 
 interface HeroProps {
   lang: Language;
-  onOpenContact: () => void;
+  onOpenContact: (initialUrl?: string) => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
   const t = dictionary[lang].hero;
+  const [urlInput, setUrlInput] = useState('');
+
+  const handleUrlSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onOpenContact(urlInput.trim());
+  };
 
   return (
     <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-slate-100/60 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300">
@@ -41,41 +47,56 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
             {t.subtitle}
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          {/* Interactive URL Diagnostic Bar (Neil Patel Style) */}
+          <form
+            onSubmit={handleUrlSubmit}
+            className="max-w-2xl mx-auto mb-6 p-2 rounded-2xl bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700/80 shadow-xl focus-within:border-blue-600 dark:focus-within:border-blue-500 transition-all flex flex-col sm:flex-row items-center gap-2"
+          >
+            <div className="flex items-center w-full flex-1 px-3.5 py-2">
+              <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mr-3" />
+              <input
+                type="text"
+                value={urlInput}
+                onChange={(e) => setUrlInput(e.target.value)}
+                placeholder={t.urlPlaceholder}
+                className="w-full bg-transparent text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 text-sm sm:text-base font-medium focus:outline-none"
+              />
+            </div>
             <button
-              onClick={onOpenContact}
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm sm:text-base text-white bg-slate-900 dark:bg-blue-600 shadow-lg hover:bg-slate-800 dark:hover:bg-blue-500 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center space-x-2.5 group"
+              type="submit"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-slate-900 dark:bg-blue-600 shadow-md hover:bg-slate-800 dark:hover:bg-blue-500 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center space-x-2 shrink-0 group"
             >
-              <MessageCircle className="w-5 h-5 text-blue-400 dark:text-blue-200" />
               <span>{t.ctaPrimary}</span>
               <ArrowRight className="w-4.5 h-4.5 text-blue-400 dark:text-blue-200 group-hover:translate-x-1 transition-transform" />
             </button>
+          </form>
 
+          {/* Secondary Action: Download CV */}
+          <div className="flex items-center justify-center mb-12">
             <a
-              href="/Will_Sun_Remote_CV_2026.pdf"
+              href="/Will_Sun_Remote_CV.pdf"
               target="_blank"
               rel="noopener"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm sm:text-base text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-blue-500 transition-all flex items-center justify-center space-x-2 shadow-sm"
+              className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-sm"
             >
-              <FileText className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
+              <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
               <span>{t.ctaSecondary}</span>
             </a>
           </div>
 
           {/* Feature Bullets */}
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 mb-16">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 mb-16">
             <div className="flex items-center space-x-2 bg-white dark:bg-slate-900 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-              <ShieldCheck className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
-              <span>{lang === 'en' ? '15–25 hrs/wk Fractional & Retainer Ready' : '每周 15–25 小时远程兼职 / Retainer'}</span>
+              <CheckCircle2 className="w-4.5 h-4.5 text-emerald-600 dark:text-emerald-400" />
+              <span>{lang === 'en' ? 'No Junior Handoffs · No Recycled Playbooks' : '拒绝二手套路 · 绝不甩手给初级员工'}</span>
             </div>
             <div className="flex items-center space-x-2 bg-white dark:bg-slate-900 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
               <Zap className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
-              <span>{lang === 'en' ? 'GeoKit & A11yKit Proprietary Audit Engines' : '自研 GeoKit & A11yKit 自动化诊断引擎'}</span>
+              <span>{lang === 'en' ? 'Hands-On Execution by Will Sun (Not Just Advice)' : 'Will Sun 本人亲自下场实操（绝非只给建议）'}</span>
             </div>
             <div className="flex items-center space-x-2 bg-white dark:bg-slate-900 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
-              <CheckCircle2 className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
-              <span>{lang === 'en' ? 'BFSU Business English (TEM-8 / CATTI-3)' : '北外商务英语专八 (TEM-8) 零障碍沟通'}</span>
+              <ShieldCheck className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
+              <span>{lang === 'en' ? '15–25 hrs/wk Fractional · Async-First (No Meeting Bloat)' : '每周 15–25h 远程兼职 · 异步高效零会议内耗'}</span>
             </div>
           </div>
         </div>

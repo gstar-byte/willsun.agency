@@ -80,11 +80,11 @@ export const Header: React.FC<HeaderProps> = ({
           </Link>
 
           {/* Multi-Page Navigation with Home & Works */}
-          <nav className="hidden md:flex items-center space-x-8 text-base lg:text-[17px] font-bold text-slate-700 dark:text-slate-200">
+          <nav className="hidden md:flex items-center space-x-7 text-[15px] font-medium text-slate-700 dark:text-slate-200">
             <Link
               href="/"
               className={`transition-colors ${
-                isActive('/') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
+                isActive('/') ? 'text-blue-600 dark:text-blue-400 font-semibold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.home}
@@ -92,7 +92,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/services"
               className={`transition-colors ${
-                isActive('/services') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
+                isActive('/services') ? 'text-blue-600 dark:text-blue-400 font-semibold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.services}
@@ -100,7 +100,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/cases"
               className={`transition-colors ${
-                isActive('/cases') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
+                isActive('/cases') ? 'text-blue-600 dark:text-blue-400 font-semibold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.cases}
@@ -108,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/works"
               className={`transition-colors ${
-                isActive('/works') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
+                isActive('/works') ? 'text-blue-600 dark:text-blue-400 font-semibold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.works}
@@ -116,7 +116,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/pricing"
               className={`transition-colors ${
-                isActive('/pricing') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
+                isActive('/pricing') ? 'text-blue-600 dark:text-blue-400 font-semibold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.pricing}
@@ -124,7 +124,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/about"
               className={`transition-colors ${
-                isActive('/about') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
+                isActive('/about') ? 'text-blue-600 dark:text-blue-400 font-semibold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.about}
@@ -132,7 +132,7 @@ export const Header: React.FC<HeaderProps> = ({
             <Link
               href="/contact"
               className={`transition-colors ${
-                isActive('/contact') ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
+                isActive('/contact') ? 'text-blue-600 dark:text-blue-400 font-semibold' : 'hover:text-blue-600 dark:hover:text-blue-400'
               }`}
             >
               {t.contact}

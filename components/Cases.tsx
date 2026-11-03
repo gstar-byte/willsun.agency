@@ -7,9 +7,10 @@ import { TrendingUp, CheckCircle, ExternalLink, ArrowRight } from 'lucide-react'
 
 interface CasesProps {
   lang: Language;
+  compact?: boolean;
 }
 
-export const Cases: React.FC<CasesProps> = ({ lang }) => {
+export const Cases: React.FC<CasesProps> = ({ lang, compact = false }) => {
   const t = dictionary[lang].cases;
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
@@ -19,6 +20,8 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
   const filteredCases = activeCategory === 'All'
     ? t.items
     : t.items.filter((c) => c.category === activeCategory);
+
+  const displayedCases = compact ? filteredCases.slice(0, 4) : filteredCases;
 
   return (
     <section id="cases" className="py-24 relative bg-white dark:bg-slate-950 transition-colors duration-300">
@@ -36,26 +39,28 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                activeCategory === cat
-                  ? 'bg-slate-900 dark:bg-blue-600 text-white shadow-md font-bold'
-                  : 'bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
-              }`}
-            >
-              {cat === 'All' ? (lang === 'en' ? 'All Case Studies' : '全部实战案例') : cat}
-            </button>
-          ))}
-        </div>
+        {/* Category Filters (Shown on Full Cases Page) */}
+        {!compact && (
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+                  activeCategory === cat
+                    ? 'bg-slate-900 dark:bg-blue-600 text-white shadow-md font-bold'
+                    : 'bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
+                }`}
+              >
+                {cat === 'All' ? (lang === 'en' ? 'All Case Studies' : '全部实战案例') : cat}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Cases Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filteredCases.map((item: any, idx: number) => (
+          {displayedCases.map((item: any, idx: number) => (
             <div
               key={idx}
               className="bg-glass-card-light dark:bg-slate-900 rounded-2xl p-8 border border-slate-200/90 dark:border-slate-800 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-300 relative group overflow-hidden flex flex-col justify-between"
@@ -71,15 +76,15 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {item.title}
                 </h3>
 
-                <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-5">
                   {item.desc}
                 </p>
 
-                {item.fullStory && (
+                {!compact && item.fullStory && (
                   <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
                     {item.fullStory}
                   </p>
@@ -88,7 +93,7 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
 
               <div>
                 {/* Highlight Result Card */}
-                <div className="p-4 rounded-xl bg-slate-900 dark:bg-slate-950 border border-slate-800 dark:border-slate-800 text-white mb-6 shadow-md">
+                <div className="p-4 rounded-xl bg-slate-900 dark:bg-slate-950 border border-slate-800 dark:border-slate-800 text-white mb-4 shadow-md">
                   <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-400 mb-1">
                     {lang === 'en' ? 'Key Growth & Monetization Impact' : '核心增长与变现成果'}
                   </div>
@@ -97,18 +102,20 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
                   </div>
                 </div>
 
-                {/* Metrics */}
-                <div className="flex flex-wrap gap-4 mb-4">
-                  {item.metrics.map((m: string, mIdx: number) => (
-                    <div
-                      key={mIdx}
-                      className="flex items-center space-x-1.5 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300"
-                    >
-                      <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" />
-                      <span>{m}</span>
-                    </div>
-                  ))}
-                </div>
+                {/* Metrics (Shown on Full Cases Page) */}
+                {!compact && (
+                  <div className="flex flex-wrap gap-4 mb-4">
+                    {item.metrics.map((m: string, mIdx: number) => (
+                      <div
+                        key={mIdx}
+                        className="flex items-center space-x-1.5 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300"
+                      >
+                        <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" />
+                        <span>{m}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 {item.url && (
                   <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
@@ -129,16 +136,18 @@ export const Cases: React.FC<CasesProps> = ({ lang }) => {
           ))}
         </div>
 
-        {/* Works Page Exploration Banner */}
-        <div className="mt-14 text-center">
-          <Link
-            href="/works"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs sm:text-sm font-bold shadow-md hover:shadow-lg hover:scale-[1.02] transition-all"
-          >
-            <span>{lang === 'en' ? 'Explore Live AI-Native Audit Tools (GeoKit, A11yKit & CADGuide)' : '探索自研 AI 原生诊断工具矩阵 (GeoKit, A11yKit & CADGuide)'}</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+        {/* Works Page Exploration Banner (Shown on Full Cases Page) */}
+        {!compact && (
+          <div className="mt-14 text-center">
+            <Link
+              href="/works"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm sm:text-base font-bold shadow-md hover:shadow-lg hover:scale-[1.02] transition-all"
+            >
+              <span>{lang === 'en' ? 'Explore Live AI-Native Audit Tools (GeoKit, A11yKit & CADGuide)' : '探索自研 AI 原生诊断工具矩阵 (GeoKit, A11yKit & CADGuide)'}</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

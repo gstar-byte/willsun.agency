@@ -54,8 +54,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
                 will@willsun.agency
               </a>
               {' · '}
-              <a href="/Will_Sun_Remote_CV_2026.pdf" target="_blank" rel="noopener" className="text-slate-300 hover:text-white underline">
-                2026 CV (PDF)
+              <a href="/Will_Sun_Remote_CV.pdf" target="_blank" rel="noopener" className="text-slate-300 hover:text-white underline">
+                {new Date().getFullYear()} CV (PDF)
               </a>
             </div>
             <div>© {new Date().getFullYear()} WillSun.agency. {t.rights}</div>

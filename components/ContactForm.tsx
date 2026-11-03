@@ -1,15 +1,16 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { dictionary, Language } from '@/lib/dictionary';
 import { Send, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 
 interface ContactFormProps {
   lang: Language;
+  initialWebsite?: string;
   onSuccess?: () => void;
 }
 
-export const ContactForm: React.FC<ContactFormProps> = ({ lang, onSuccess }) => {
+export const ContactForm: React.FC<ContactFormProps> = ({ lang, initialWebsite = '', onSuccess }) => {
   const t = dictionary[lang].contact;
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -18,9 +19,16 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, onSuccess }) => 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    website: '',
+    website: initialWebsite,
+    budget: t.budgetOptions[0],
     message: '',
   });
+
+  useEffect(() => {
+    if (initialWebsite) {
+      setFormData((prev) => ({ ...prev, website: initialWebsite }));
+    }
+  }, [initialWebsite]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,6 +50,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, onSuccess }) => 
           '客户姓名 / Name': formData.name,
           '联系邮箱 / Email': formData.email,
           '网站链接 / Website': formData.website || '未提供',
+          '合作方案与预算 / Engagement & Budget': formData.budget || '未选择',
           '需求与痛点 / Message': formData.message,
           _template: 'table',
           _captcha: 'false',
@@ -58,7 +67,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, onSuccess }) => 
 
       if (isSuccess) {
         setSubmitted(true);
-        setFormData({ name: '', email: '', website: '', message: '' });
+        setFormData({ name: '', email: '', website: '', budget: t.budgetOptions[0], message: '' });
         if (onSuccess) {
           setTimeout(() => {
             onSuccess();
@@ -91,7 +100,19 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, onSuccess }) => 
           {lang === 'zh' ? '留言已成功送达！' : 'Message Delivered Successfully!'}
         </h4>
         <p className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-300 max-w-md mx-auto">
-          {t.successMsg}
+          {t.successMsg.split('will@willsun.agency').map((part, idx, arr) => (
+            <React.Fragment key={idx}>
+              {part}
+              {idx < arr.length - 1 && (
+                <a
+                  href="mailto:will@willsun.agency"
+                  className="underline font-semibold hover:text-emerald-900 dark:hover:text-emerald-100"
+                >
+                  will@willsun.agency
+                </a>
+              )}
+            </React.Fragment>
+          ))}
         </p>
       </div>
     );
@@ -135,17 +156,35 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, onSuccess }) => 
         </div>
       </div>
 
-      <div>
-        <label className="block text-slate-700 dark:text-slate-300 font-semibold mb-1">
-          {t.websiteLabel}
-        </label>
-        <input
-          type="text"
-          value={formData.website}
-          onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-          className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-slate-900 dark:focus:border-blue-500 transition-colors"
-          placeholder="https://yourwebsite.com"
-        />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-slate-700 dark:text-slate-300 font-semibold mb-1">
+            {t.websiteLabel}
+          </label>
+          <input
+            type="text"
+            value={formData.website}
+            onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+            className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-slate-900 dark:focus:border-blue-500 transition-colors"
+            placeholder="https://yourwebsite.com"
+          />
+        </div>
+        <div>
+          <label className="block text-slate-700 dark:text-slate-300 font-semibold mb-1">
+            {t.budgetLabel}
+          </label>
+          <select
+            value={formData.budget}
+            onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+            className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:border-slate-900 dark:focus:border-blue-500 transition-colors"
+          >
+            {t.budgetOptions.map((option, idx) => (
+              <option key={idx} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div>
@@ -185,9 +224,29 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, onSuccess }) => 
       </button>
 
       <div className="text-center text-[11px] text-slate-500 dark:text-slate-400">
-        {lang === 'zh'
-          ? '🔒 严格保密 · 直达 will@willsun.agency · 承诺 12 小时内由 Will Sun 亲自回复'
-          : '🔒 100% Confidential · Direct to will@willsun.agency · 12h Fast Turnaround'}
+        {lang === 'zh' ? (
+          <>
+            🔒 严格保密 · 直达{' '}
+            <a
+              href="mailto:will@willsun.agency"
+              className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+            >
+              will@willsun.agency
+            </a>{' '}
+            · 承诺 12 小时内由 Will Sun 亲自回复
+          </>
+        ) : (
+          <>
+            🔒 100% Confidential · Direct to{' '}
+            <a
+              href="mailto:will@willsun.agency"
+              className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+            >
+              will@willsun.agency
+            </a>{' '}
+            · 12h Fast Turnaround
+          </>
+        )}
       </div>
     </form>
   );

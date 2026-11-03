@@ -82,7 +82,19 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
             {hero.title}
           </h1>
           <p className="text-slate-600 dark:text-slate-300 text-lg max-w-2xl mx-auto font-normal">
-            {hero.subtitle}
+            {hero.subtitle.split('will@willsun.agency').map((part, idx, arr) => (
+              <React.Fragment key={idx}>
+                {part}
+                {idx < arr.length - 1 && (
+                  <a
+                    href="mailto:will@willsun.agency"
+                    className="text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4 hover:text-blue-500 transition-colors"
+                  >
+                    will@willsun.agency
+                  </a>
+                )}
+              </React.Fragment>
+            ))}
           </p>
         </div>
       </div>
@@ -105,7 +117,19 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
                   {t.contact.title}
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 text-sm max-w-lg mx-auto">
-                  {t.contact.subtitle}
+                  {t.contact.subtitle.split('will@willsun.agency').map((part, idx, arr) => (
+                    <React.Fragment key={idx}>
+                      {part}
+                      {idx < arr.length - 1 && (
+                        <a
+                          href="mailto:will@willsun.agency"
+                          className="text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4 hover:text-blue-500 transition-colors"
+                        >
+                          will@willsun.agency
+                        </a>
+                      )}
+                    </React.Fragment>
+                  ))}
                 </p>
               </div>
 

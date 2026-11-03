@@ -1,15 +1,17 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { dictionary, Language } from '@/lib/dictionary';
 import { Compass, Target, DollarSign, Code, CheckCircle2, ArrowUpRight, Sparkles } from 'lucide-react';
 
 interface ServicesProps {
   lang: Language;
   onOpenContact: () => void;
+  compact?: boolean;
 }
 
-export const Services: React.FC<ServicesProps> = ({ lang, onOpenContact }) => {
+export const Services: React.FC<ServicesProps> = ({ lang, onOpenContact, compact = false }) => {
   const t = dictionary[lang].services;
 
   const icons = [Compass, Target, DollarSign, Code];
@@ -54,20 +56,20 @@ export const Services: React.FC<ServicesProps> = ({ lang, onOpenContact }) => {
                     {service.title}
                   </h3>
 
-                  <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                  <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-5">
                     {service.desc}
                   </p>
 
-                  {/* Track Record Proof Callout */}
-                  {service.details && (
+                  {/* Track Record Proof Callout (Shown on Full Services Page) */}
+                  {!compact && service.details && (
                     <div className="p-3.5 rounded-xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-900/50 text-xs sm:text-sm text-slate-800 dark:text-blue-200 mb-6 flex items-start gap-2.5">
                       <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
                       <span className="font-medium leading-relaxed">{service.details}</span>
                     </div>
                   )}
 
-                  {/* Concrete Deliverables Checklist */}
-                  {deliverables.length > 0 && (
+                  {/* Concrete Deliverables Checklist (Shown on Full Services Page) */}
+                  {!compact && deliverables.length > 0 && (
                     <div className="mb-6">
                       <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
                         {lang === 'en' ? 'Included End-to-End Deliverables:' : '具体落地交付清单：'}
@@ -112,17 +114,31 @@ export const Services: React.FC<ServicesProps> = ({ lang, onOpenContact }) => {
                     ))}
                   </div>
 
-                  <button
-                    onClick={onOpenContact}
-                    className="inline-flex items-center space-x-1.5 text-xs sm:text-sm font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                  >
-                    <span>
-                      {lang === 'en'
-                        ? 'Discuss this solution for your project'
-                        : '咨询该模块的定制落地方案'}
-                    </span>
-                    <ArrowUpRight className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                  </button>
+                  {compact ? (
+                    <Link
+                      href="/services"
+                      className="inline-flex items-center space-x-1.5 text-xs sm:text-sm font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    >
+                      <span>
+                        {lang === 'en'
+                          ? 'View Full Deliverables & Track Record'
+                          : '查看完整交付清单与实战战绩'}
+                      </span>
+                      <ArrowUpRight className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={onOpenContact}
+                      className="inline-flex items-center space-x-1.5 text-xs sm:text-sm font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    >
+                      <span>
+                        {lang === 'en'
+                          ? 'Discuss this solution for your project'
+                          : '咨询该模块的定制落地方案'}
+                      </span>
+                      <ArrowUpRight className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                    </button>
+                  )}
                 </div>
               </div>
             );

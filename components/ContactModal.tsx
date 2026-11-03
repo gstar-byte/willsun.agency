@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import { dictionary, Language } from '@/lib/dictionary';
@@ -8,12 +8,14 @@ import { ContactForm } from './ContactForm';
 interface ContactModalProps {
   lang: Language;
   isOpen: boolean;
+  initialWebsite?: string;
   onClose: () => void;
 }
 
 export const ContactModal: React.FC<ContactModalProps> = ({
   lang,
   isOpen,
+  initialWebsite = '',
   onClose,
 }) => {
   const t = dictionary[lang].contact;
@@ -38,10 +40,24 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             <span>Direct Growth Consultation</span>
           </div>
           <h3 className="text-2xl font-black text-slate-900 dark:text-white">{t.title}</h3>
-          <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-1">{t.subtitle}</p>
+          <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-1">
+            {t.subtitle.split('will@willsun.agency').map((part, idx, arr) => (
+              <React.Fragment key={idx}>
+                {part}
+                {idx < arr.length - 1 && (
+                  <a
+                    href="mailto:will@willsun.agency"
+                    className="text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4 hover:text-blue-500 transition-colors"
+                  >
+                    will@willsun.agency
+                  </a>
+                )}
+              </React.Fragment>
+            ))}
+          </p>
         </div>
 
-        <ContactForm lang={lang} onSuccess={onClose} />
+        <ContactForm lang={lang} initialWebsite={initialWebsite} onSuccess={onClose} />
       </div>
     </div>
   );
