@@ -22,7 +22,7 @@ if hasattr(sys.stdout, "reconfigure"):
 EMAIL_CFG_PATH = r"C:\Users\willp\.gemini\config\willsun_email_config.json"
 PLATFORMS_OUT_PATH = r"C:\Users\willp\.gemini\config\willsun_remote_platforms.json"
 AVATAR_PATH = r"f:\willsun.agency\public\will-sun-avatar.jpg"
-CV_PATH = r"f:\willsun.agency\public\Will_Sun_Remote_CV_2026.pdf"
+CV_PATH = r"f:\willsun.agency\public\Will_Sun_Remote_CV.pdf"
 
 PROFILE_DATA = {
     "first_name": "Will",
@@ -31,29 +31,26 @@ PROFILE_DATA = {
     "username": "willsunagency",
     "email": "will@willsun.agency",
     "password": "WillSun#2026!Growth",
-    "headline": "Fractional Growth Manager | Technical SEO, GEO & AI-Native Engineer",
+    "headline": "Fractional Growth & Monetization Lead | SEO, GEO, Google Ads & Web Building",
     "hourly_rate": "65",
     "website": "https://willsun.agency",
     "location": "Beijing, China",
     "bio": (
-        "Results-driven Fractional Growth Marketing Manager & AI-Native Technical SEO Consultant with 16+ years of "
-        "hands-on experience scaling global organic search, paid acquisition (Google Ads/PMax/Meta), and subscription "
-        "monetization across B2B/B2C SaaS, DTC e-commerce, and cross-platform apps.\n\n"
-        "• In-House Global Scale: Direct global growth & monetization for DWG FastView (30,000+ overseas PC DAU across "
-        "12+ localized domains and 27 channels; owning Google Play, App Store & 2Checkout subscription funnels + Python GA4/GSC pipelines).\n"
-        "• Fractional & Client Track Record: Fractional SEO & Google Ads consultant for KingCamp (kingcampoutdoors.com), "
-        "Yoybuy (yoybuy.com), and B2B industrial exporters AbleTarget (abletarget.com) & UnirCable (unircable.com); "
-        "formerly drove 20 consecutive months of GMV growth at US logistics SaaS PostPony and managed global affiliate UA for Clash of Kings.\n"
-        "• Proprietary AI-Native Live Portfolio: Founder & developer of GeoKit.site (Generative Engine Optimization & AI Search Auditor), "
-        "A11yKit.site (WCAG 2.2 / ADA Compliance Scanner), CADGuide.tools (45+ interactive engineering calculators scaled to 2,500+ monthly "
-        "organic visits), GstarCademy.com, ChanZong.space, and RamanaMaharshi.space.\n"
-        "• Bilingual Fluency: B.A. in Business English from Beijing Foreign Studies University (TEM-8 & CATTI-3 certified), "
-        "former overseas on-site interpreter in Trinidad & Tobago."
+        "Results-driven Fractional Growth & Monetization Lead with 16+ years of hands-on experience (since 2010) "
+        "building high-converting websites, scaling global user acquisition (Google Ads/PMax/Meta, Affiliate Networks, GEO & Technical SEO), "
+        "and driving subscription & ad monetization across B2B/B2C SaaS, cross-border DTC e-commerce, and mobile/PC apps.\n\n"
+        "• In-House Global Scale: Direct global growth & monetization for DWG FastView (1.5M+ Global DAU across Mobile, PC & Web; "
+        "50M+ users across 100+ countries, 12+ localized domains and 27 PC channels; owning Google Play, App Store & 2Checkout subscription funnels + Python GA4/GSC pipelines).\n"
+        "• Fractional & Client Track Record: Fractional SEO & Google Ads consultant for KingCamp Outdoors (kingcampoutdoors.com, +85% non-brand SEO, 3.8x ROAS), "
+        "Yoybuy (yoybuy.com, +140% organic traffic, -32% CPA), and B2B industrial leaders AbleTarget (abletarget.com) & UnirCable (unircable.com); "
+        "formerly drove 20 consecutive months of GMV growth at US logistics SaaS PostPony, managed global affiliate UA for Clash of Kings, and served as vendor-side ClickBank Affiliate Manager for Perfect Optimizer.\n"
+        "• Full-Stack Web Building & Live Product Portfolio: Hands-on execution (no junior handoffs, async-first workflow) across custom Next.js/WordPress/Shopify websites, "
+        "market & user persona research, and proprietary platforms including GeoKit.site, A11yKit.site, CADGuide.tools, GstarCademy.com, ChanZong.space, and RamanaMaharshi.space."
     ),
     "skills": [
-        "Technical SEO", "Programmatic SEO", "Generative Engine Optimization (GEO)",
-        "Google Ads", "Google Analytics 4", "Python", "Next.js", "WCAG Accessibility",
-        "Conversion Rate Optimization", "SaaS Growth", "E-Commerce SEO", "Affiliate Marketing"
+        "Technical SEO", "Generative Engine Optimization (GEO)", "Google Ads",
+        "Conversion Rate Optimization", "SaaS Monetization", "Affiliate Marketing",
+        "Google Analytics 4", "Next.js", "WordPress", "Shopify", "Python", "E-Commerce Growth"
     ],
     "portfolio_urls": [
         "https://willsun.agency",
