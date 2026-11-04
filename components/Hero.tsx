@@ -85,19 +85,32 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
           </div>
 
           {/* Feature Bullets */}
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 mb-16">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 mb-6">
             <div className="flex items-center space-x-2 bg-white dark:bg-slate-900 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
               <CheckCircle2 className="w-4.5 h-4.5 text-emerald-600 dark:text-emerald-400" />
-              <span>{lang === 'en' ? 'No Junior Handoffs · No Recycled Playbooks' : '拒绝二手套路 · 绝不甩手给初级员工'}</span>
+              <span>{lang === 'en' ? '100% Independent Consultant (Not a Multi-Layer Agency)' : '100% 独立个人顾问（非多层转包代运营机构）'}</span>
             </div>
             <div className="flex items-center space-x-2 bg-white dark:bg-slate-900 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
               <Zap className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
-              <span>{lang === 'en' ? 'Hands-On Execution by Will Sun (Not Just Advice)' : 'Will Sun 本人亲自下场实操（绝非只给建议）'}</span>
+              <span>{lang === 'en' ? 'Direct Hands-On Execution by Will Sun (Zero Junior Outsourcing)' : 'Will Sun 本人亲自实操交付（绝不转包给初级人员）'}</span>
             </div>
             <div className="flex items-center space-x-2 bg-white dark:bg-slate-900 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
               <ShieldCheck className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
               <span>{lang === 'en' ? '15–25 hrs/wk Fractional · Async-First (No Meeting Bloat)' : '每周 15–25h 远程兼职 · 异步高效零会议内耗'}</span>
             </div>
+          </div>
+
+          {/* Direct Individual Consultant Clarification Banner */}
+          <div className="max-w-3xl mx-auto mb-14 px-4 py-3 rounded-xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-900/50 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            {lang === 'en' ? (
+              <>
+                <strong className="text-slate-900 dark:text-white font-bold">Note for Founders &amp; Hiring Managers:</strong> Despite the <code className="px-1.5 py-0.5 rounded bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-mono text-xs">.agency</code> domain, I operate strictly as an <strong className="text-slate-900 dark:text-white">independent, hands-on individual consultant</strong>. Every audit, line of code, SEO/GEO campaign, and Google Ads setup is executed directly by me.
+              </>
+            ) : (
+              <>
+                <strong className="text-slate-900 dark:text-white font-bold">致创始人与招聘负责人：</strong> 尽管使用 <code className="px-1.5 py-0.5 rounded bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-mono text-xs">.agency</code> 域名作为个人作品集，我始终以<strong className="text-slate-900 dark:text-white">独立个人顾问（Individual Consultant）</strong>身份合作。每一份诊断、每一行代码、每一次 SEO/GEO 与 Google Ads 投放均由我本人直接执行，零转包。
+              </>
+            )}
           </div>
         </div>
 

@@ -12,12 +12,12 @@ export const TrustBar: React.FC<TrustBarProps> = ({ lang }) => {
   const t = dictionary[lang].trust;
 
   const logos = [
-    { icon: Globe2, label: 'DWG FastView (1.5M+ DAU)' },
-    { icon: Trophy, label: 'KingCamp Outdoors (DTC SEO & Ads)' },
-    { icon: Rocket, label: 'Yoybuy (Cross-Border E-Commerce)' },
-    { icon: Zap, label: 'Clash of Kings (Global Affiliate UA)' },
-    { icon: ShieldCheck, label: 'PostPony (US Logistics SaaS)' },
-    { icon: Award, label: 'Perfect Optimizer (ClickBank Affiliate Manager)' },
+    { icon: Globe2, label: 'DWG FastView (1.5M+ DAU · en.dwgfastview.com)' },
+    { icon: Trophy, label: 'KingCamp (DTC SEO & Ads · kingcamp.com)' },
+    { icon: Rocket, label: 'Yoybuy (Cross-Border E-Com · yoybuy.com)' },
+    { icon: ShieldCheck, label: 'PostPony (US Logistics SaaS · postpony.com)' },
+    { icon: Zap, label: 'AbleTarget & UnirCable (B2B · abletarget.com / unircable.com)' },
+    { icon: Award, label: 'Clash of Kings & ClickBank (Global Affiliate UA)' },
   ];
 
   return (

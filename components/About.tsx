@@ -231,12 +231,30 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                   <a
-                    href="https://www.kingcampoutdoors.com/"
+                    href="https://www.kingcamp.com/"
                     target="_blank"
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">KingCamp (Client)</span>
+                    <span className="truncate">KingCamp.com (DTC)</span>
+                    <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                  </a>
+                  <a
+                    href="https://www.yoybuy.com/"
+                    target="_blank"
+                    rel="noopener"
+                    className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                  >
+                    <span className="truncate">Yoybuy.com (E-Com)</span>
+                    <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
+                  </a>
+                  <a
+                    href="https://www.postpony.com/"
+                    target="_blank"
+                    rel="noopener"
+                    className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                  >
+                    <span className="truncate">PostPony.com (US SaaS)</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                 </div>
