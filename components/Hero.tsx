@@ -104,7 +104,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenContact }) => {
           <div className="max-w-3xl mx-auto mb-14 px-4 py-3 rounded-xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-900/50 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
             {lang === 'en' ? (
               <>
-                <strong className="text-slate-900 dark:text-white font-bold">Note for Founders &amp; Hiring Managers:</strong> Despite the <code className="px-1.5 py-0.5 rounded bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-mono text-xs">.agency</code> domain, I operate strictly as an <strong className="text-slate-900 dark:text-white">independent, hands-on individual consultant</strong>. Every audit, line of code, SEO/GEO campaign, and Google Ads setup is executed directly by me.
+                <strong className="text-slate-900 dark:text-white font-bold">Quick note for founders &amp; hiring managers:</strong> Even though my site uses a <code className="px-1.5 py-0.5 rounded bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-mono text-xs">.agency</code> domain, I work strictly as an <strong className="text-slate-900 dark:text-white">independent, hands-on individual consultant</strong>. I don&apos;t pass work to junior staff. I personally handle every site audit, code fix, SEO/GEO update, and Google Ads campaign.
               </>
             ) : (
               <>
