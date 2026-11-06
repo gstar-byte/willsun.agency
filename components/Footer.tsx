@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Tagline */}
           <Link href="/" className="flex items-center space-x-3">
-            <Logo size={36} invert={true} />
+            <Logo size={36} invert={true} lang={lang} />
           </Link>
 
           {/* Quick Nav Links with Home */}
@@ -55,7 +55,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
               </a>
               {' · '}
               <a href="/Will_Sun_Remote_CV.pdf" target="_blank" rel="noopener" className="text-slate-300 hover:text-white underline">
-                {new Date().getFullYear()} CV (PDF)
+                {lang === 'zh' ? `${new Date().getFullYear()} 个人简历 (PDF)` : `${new Date().getFullYear()} CV (PDF)`}
               </a>
             </div>
             <div>© {new Date().getFullYear()} WillSun.agency. {t.rights}</div>

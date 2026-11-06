@@ -1,14 +1,16 @@
 'use client';
 
 import React from 'react';
+import { Language } from '@/lib/dictionary';
 
 interface LogoProps {
   className?: string;
   size?: number;
   invert?: boolean;
+  lang?: Language;
 }
 
-export const Logo: React.FC<LogoProps> = ({ className = '', size = 44, invert = false }) => {
+export const Logo: React.FC<LogoProps> = ({ className = '', size = 44, invert = false, lang = 'en' }) => {
   return (
     <div className={`flex items-center space-x-3.5 ${className}`}>
       {/* Pure White Base 3-Dot Ascending W Logo Icon */}
@@ -81,7 +83,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 44, invert = 
             invert ? 'text-slate-400' : 'text-slate-500 dark:text-slate-400'
           }`}
         >
-          Growth & Monetize
+          {lang === 'zh' ? '建站 · 获客 · 商业化' : 'Growth & Monetize'}
         </span>
 
         {/* Line 3: Crimson Red Accent Solo Consultant Badge */}
@@ -90,7 +92,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 44, invert = 
             invert ? 'text-red-400' : 'text-red-600 dark:text-red-400'
           }`}
         >
-          Solo Consultant
+          {lang === 'zh' ? '独立个人顾问' : 'Solo Consultant'}
         </span>
       </div>
     </div>

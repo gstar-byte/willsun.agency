@@ -76,7 +76,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center justify-between">
           {/* Logo Link to Home */}
           <Link href="/" className="group">
-            <Logo size={40} />
+            <Logo size={40} lang={lang} />
           </Link>
 
           {/* Multi-Page Navigation with Home & Works */}

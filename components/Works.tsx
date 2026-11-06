@@ -13,6 +13,10 @@ export const Works: React.FC<WorksProps> = ({ lang, compact = false }) => {
   const t = dictionary[lang].works;
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
+  React.useEffect(() => {
+    setActiveCategory('All');
+  }, [lang]);
+
   const filteredItems = activeCategory === 'All'
     ? t.items
     : t.items.filter((item) => item.category === activeCategory);

@@ -14,6 +14,10 @@ export const Cases: React.FC<CasesProps> = ({ lang, compact = false }) => {
   const t = dictionary[lang].cases;
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
+  React.useEffect(() => {
+    setActiveCategory('All');
+  }, [lang]);
+
   const uniqueCategories = Array.from(new Set(t.items.map((item) => item.category)));
   const categories = ['All', ...uniqueCategories];
 

@@ -25,6 +25,13 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, initialWebsite =
   });
 
   useEffect(() => {
+    setFormData((prev) => {
+      if (t.budgetOptions.includes(prev.budget)) return prev;
+      return { ...prev, budget: t.budgetOptions[0] };
+    });
+  }, [lang, t.budgetOptions]);
+
+  useEffect(() => {
     if (initialWebsite) {
       setFormData((prev) => ({ ...prev, website: initialWebsite }));
     }

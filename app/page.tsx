@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Language, dictionary } from '@/lib/dictionary';
+import { dictionary } from '@/lib/dictionary';
+import { useLanguage } from '@/lib/useLanguage';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { TrustBar } from '@/components/TrustBar';
@@ -16,7 +17,7 @@ import { Footer } from '@/components/Footer';
 import { ArrowRight, Sparkles, Globe } from 'lucide-react';
 
 export default function Home() {
-  const [lang, setLang] = useState<Language>('en');
+  const [lang, setLang] = useLanguage();
   const [contactOpen, setContactOpen] = useState(false);
   const [initialWebsite, setInitialWebsite] = useState('');
   const [bottomUrlInput, setBottomUrlInput] = useState('');
@@ -150,7 +151,7 @@ export default function Home() {
               type="submit"
               className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base uppercase tracking-wider text-white bg-slate-900 dark:bg-blue-600 shadow-md hover:bg-slate-800 dark:hover:bg-blue-500 hover:scale-[1.01] transition-all shrink-0"
             >
-              {lang === 'en' ? 'Get Free In-Depth Review' : '获取免费深度审查报告'}
+              {lang === 'en' ? 'Get Free Site Review' : '获取免费诊断报告'}
             </button>
           </form>
         </div>

@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Language, dictionary } from '@/lib/dictionary';
+import { dictionary } from '@/lib/dictionary';
+import { useLanguage } from '@/lib/useLanguage';
 import { Header } from '@/components/Header';
 import { Services } from '@/components/Services';
 import { Cases } from '@/components/Cases';
@@ -17,7 +18,7 @@ interface PageClientWrapperProps {
 }
 
 export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }) => {
-  const [lang, setLang] = useState<Language>('en');
+  const [lang, setLang] = useLanguage();
   const [contactOpen, setContactOpen] = useState(false);
 
   const t = dictionary[lang];

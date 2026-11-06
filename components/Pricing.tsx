@@ -45,7 +45,7 @@ export const Pricing: React.FC<PricingProps> = ({ lang, onOpenContact, compact =
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-slate-900 dark:bg-blue-600 text-blue-400 dark:text-white text-xs font-bold uppercase tracking-wider flex items-center space-x-1 shadow-md">
                     <Star className="w-3.5 h-3.5 fill-blue-400 dark:fill-white" />
-                    <span>Most Popular Plan</span>
+                    <span>{lang === 'zh' ? '最受欢迎方案' : 'Most Popular Plan'}</span>
                   </div>
                 )}
 

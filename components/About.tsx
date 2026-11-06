@@ -26,13 +26,15 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
               <div className="mb-6 flex items-center space-x-4">
                 <img
                   src="/will-sun-avatar.jpg?v=2"
-                  alt="Will Sun - Fractional Growth & Full-Stack Engineer"
+                  alt={lang === 'zh' ? '孙伟 (Will Sun) - 独立出海增长与全栈顾问' : 'Will Sun - Fractional Growth & Full-Stack Engineer'}
                   className="w-16 h-16 rounded-2xl object-cover border-2 border-blue-500/40 shadow-md"
                 />
                 <div>
-                  <h3 className="text-2xl font-black text-slate-900 dark:text-white leading-tight">Will Sun</h3>
+                  <h3 className="text-2xl font-black text-slate-900 dark:text-white leading-tight">
+                    {lang === 'zh' ? '孙伟 (Will Sun)' : 'Will Sun'}
+                  </h3>
                   <p className="text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mt-0.5">
-                    Fractional Growth &amp; Monetization Lead
+                    {lang === 'zh' ? '独立出海增长与商业化顾问' : 'Fractional Growth & Monetization Lead'}
                   </p>
                 </div>
               </div>
@@ -40,19 +42,35 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
               <div className="space-y-3 pt-6 border-t border-slate-100 dark:border-slate-800 text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">
                 <div className="flex items-center space-x-2.5">
                   <Award className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                  <span>{EXP_YEARS}+ Yrs Scaling Global Traffic &amp; Revenue</span>
+                  <span>
+                    {lang === 'zh'
+                      ? `${EXP_YEARS}+ 年海外流量获取与商业化变现经验`
+                      : `${EXP_YEARS}+ Yrs Scaling Global Traffic & Revenue`}
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2.5">
                   <LineChart className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                  <span>Scaled DWG FastView (1.5M+ DAU), KingCamp &amp; Yoybuy</span>
+                  <span>
+                    {lang === 'zh'
+                      ? '操盘浩辰 CAD 国际版 (150万+ 日活)、KingCamp 与 Yoybuy'
+                      : 'Scaled DWG FastView (1.5M+ DAU), KingCamp & Yoybuy'}
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2.5">
                   <ShieldCheck className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                  <span>Full-Funnel Monetization (Stripe, Paddle &amp; App Stores)</span>
+                  <span>
+                    {lang === 'zh'
+                      ? '全链路订阅与广告变现 (Stripe、Paddle 与应用商店)'
+                      : 'Full-Funnel Monetization (Stripe, Paddle & App Stores)'}
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2.5">
                   <Code2 className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                  <span>Custom Web Building, Market Research &amp; GEO/SEO</span>
+                  <span>
+                    {lang === 'zh'
+                      ? '定制独立站开发、市场调研与 GEO/SEO 优化'
+                      : 'Custom Web Building, Market Research & GEO/SEO'}
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2.5 text-blue-600 dark:text-blue-400 font-bold pt-2 border-t border-slate-100 dark:border-slate-800/80">
                   <Globe className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400 shrink-0" />
@@ -74,7 +92,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                   className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-blue-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-blue-500 transition-all shadow-sm"
                 >
                   <FileText className="w-4 h-4 text-blue-400 dark:text-blue-200" />
-                  <span>{lang === 'en' ? 'Download CV (PDF)' : '下载英文简历 (PDF)'}</span>
+                  <span>{lang === 'en' ? 'Download CV (PDF)' : '下载个人简历 (PDF)'}</span>
                 </a>
               </div>
             </div>
@@ -153,9 +171,9 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
               <div className="p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
                 <div className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3 flex items-center justify-between">
                   <span>{lang === 'en' ? 'Live Proprietary Audit Engines & Sister Portals' : '自研在线审计引擎与数字资产矩阵'}</span>
-                  <a href="/works" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">
+                  <Link href="/works" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">
                     {lang === 'en' ? 'View All Live Tools →' : '查看全部工具 →'}
-                  </a>
+                  </Link>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs font-semibold">
                   <a
@@ -164,7 +182,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">GeoKit.site (GEO)</span>
+                    <span className="truncate">{lang === 'zh' ? 'GeoKit.site (GEO 工具)' : 'GeoKit.site (GEO)'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                   <a
@@ -173,7 +191,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">A11yKit.site (WCAG)</span>
+                    <span className="truncate">{lang === 'zh' ? 'A11yKit.site (无障碍)' : 'A11yKit.site (WCAG)'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                   <a
@@ -191,7 +209,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">GstarCademy</span>
+                    <span className="truncate">{lang === 'zh' ? 'GstarCademy (浩辰学院)' : 'GstarCademy'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                   <a
@@ -200,7 +218,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">RamanaMaharshi</span>
+                    <span className="truncate">{lang === 'zh' ? '马哈希数字典藏' : 'RamanaMaharshi'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                   <a
@@ -209,7 +227,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">ChanZong.space</span>
+                    <span className="truncate">{lang === 'zh' ? '禅宗数字空间' : 'ChanZong.space'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                   <a
@@ -218,7 +236,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">AbleTarget (Client)</span>
+                    <span className="truncate">{lang === 'zh' ? 'AbleTarget (客户案例)' : 'AbleTarget (Client)'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                   <a
@@ -227,7 +245,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">UnirCable (Client)</span>
+                    <span className="truncate">{lang === 'zh' ? 'UnirCable (客户案例)' : 'UnirCable (Client)'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                   <a
@@ -236,7 +254,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">KingCamp.com (DTC)</span>
+                    <span className="truncate">{lang === 'zh' ? 'KingCamp (跨境 DTC)' : 'KingCamp.com (DTC)'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                   <a
@@ -245,7 +263,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">Yoybuy.com (E-Com)</span>
+                    <span className="truncate">{lang === 'zh' ? 'Yoybuy 优贝 (跨境电商)' : 'Yoybuy.com (E-Com)'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                   <a
@@ -254,7 +272,7 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     rel="noopener"
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
-                    <span className="truncate">PostPony.com (US SaaS)</span>
+                    <span className="truncate">{lang === 'zh' ? 'PostPony (美国 SaaS)' : 'PostPony.com (US SaaS)'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[10px]">↗</span>
                   </a>
                 </div>

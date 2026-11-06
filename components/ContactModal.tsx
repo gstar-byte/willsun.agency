@@ -29,7 +29,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-          aria-label="Close contact dialog"
+          aria-label={lang === 'zh' ? '关闭联系窗口' : 'Close contact dialog'}
         >
           <X className="w-5 h-5" />
         </button>
@@ -37,7 +37,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         <div className="text-center mb-6">
           <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900/50 text-slate-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-2">
             <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-            <span>Direct Growth Consultation</span>
+            <span>{lang === 'zh' ? '直接联系本人咨询' : 'Direct Growth Consultation'}</span>
           </div>
           <h3 className="text-2xl font-black text-slate-900 dark:text-white">{t.title}</h3>
           <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-1">
