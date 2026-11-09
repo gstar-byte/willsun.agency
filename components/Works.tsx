@@ -102,7 +102,7 @@ export const Works: React.FC<WorksProps> = ({ lang, compact = false }) => {
                 {/* Result Highlights (Shown on Full Works Page) */}
                 {!compact && (
                   <div className="p-3.5 rounded-xl bg-slate-900 dark:bg-slate-950 border border-slate-800 text-white mb-5 shadow-inner">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-blue-400 mb-1 flex items-center gap-1">
+                    <div className="text-[13.75px] font-bold uppercase tracking-wider text-blue-400 mb-1 flex items-center gap-1">
                       <Sparkles className="w-3 h-3" />
                       <span>{lang === 'en' ? 'Asset Impact' : '核心成果亮点'}</span>
                     </div>
@@ -117,7 +117,7 @@ export const Works: React.FC<WorksProps> = ({ lang, compact = false }) => {
                   {item.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2 py-0.5 text-[11px] font-medium rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
+                      className="px-2.5 py-1 text-[13.75px] font-medium rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
                     >
                       {tag}
                     </span>

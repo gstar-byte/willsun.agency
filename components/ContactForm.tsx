@@ -231,7 +231,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ lang, initialWebsite =
         )}
       </button>
 
-      <div className="text-center text-[11px] text-slate-500 dark:text-slate-400">
+      <div className="text-center text-[13.75px] text-slate-500 dark:text-slate-400">
         {lang === 'zh' ? (
           <>
             🔒 严格保密 · 直达{' '}

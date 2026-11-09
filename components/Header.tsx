@@ -80,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({
           </Link>
 
           {/* Multi-Page Navigation with Home & Works */}
-          <nav className="hidden md:flex items-center space-x-7 text-[15px] font-medium text-slate-700 dark:text-slate-200">
+          <nav className="hidden md:flex items-center space-x-7 text-[18.75px] font-medium text-slate-700 dark:text-slate-200">
             <Link
               href="/"
               className={`transition-colors ${

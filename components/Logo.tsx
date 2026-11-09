@@ -79,7 +79,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 44, invert = 
 
         {/* Line 2: Monetization Gray */}
         <span
-          className={`text-[9.5px] tracking-wider uppercase font-semibold ${
+          className={`text-[12px] tracking-wider uppercase font-semibold ${
             invert ? 'text-slate-400' : 'text-slate-500 dark:text-slate-400'
           }`}
         >
@@ -88,7 +88,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 44, invert = 
 
         {/* Line 3: Crimson Red Accent Solo Consultant Badge */}
         <span
-          className={`text-[9.5px] tracking-widest uppercase font-extrabold ${
+          className={`text-[12px] tracking-widest uppercase font-extrabold ${
             invert ? 'text-red-400' : 'text-red-600 dark:text-red-400'
           }`}
         >

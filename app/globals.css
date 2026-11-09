@@ -17,6 +17,8 @@ body {
     );
   min-height: 100vh;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
   overflow-x: hidden;
 }
 
