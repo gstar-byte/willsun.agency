@@ -14,20 +14,22 @@ export const Pricing: React.FC<PricingProps> = ({ lang, onOpenContact, compact =
   const t = dictionary[lang].pricing;
 
   return (
-    <section id="pricing" className="py-20 relative bg-slate-50 dark:bg-slate-900/60 transition-colors duration-300">
+    <section id="pricing" className="py-16 md:py-20 relative bg-slate-50 dark:bg-slate-900/60 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
-            {t.badge}
+        {/* Section Header (Shown only on Home Page digest; full page uses PageClientWrapper header) */}
+        {compact && (
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+              {t.badge}
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+              {t.title}
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+              {t.subtitle}
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
-            {t.title}
-          </h2>
-          <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
-            {t.subtitle}
-          </p>
-        </div>
+        )}
 
         {/* Pricing Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">

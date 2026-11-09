@@ -100,17 +100,21 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
 
           {/* Right Column - Text Bio & 16-Year Timeline */}
           <div className="lg:col-span-7">
-            <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 shadow-sm">
-              {t.badge}
-            </div>
+            {compact && (
+              <>
+                <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 shadow-sm">
+                  {t.badge}
+                </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
-              {t.title}
-            </h2>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
+                  {t.title}
+                </h2>
 
-            <p className="text-slate-700 dark:text-slate-200 text-base leading-relaxed mb-6 font-normal">
-              {t.p1}
-            </p>
+                <p className="text-slate-700 dark:text-slate-200 text-base leading-relaxed mb-6 font-normal">
+                  {t.p1}
+                </p>
+              </>
+            )}
 
             <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed mb-8 font-normal">
               {t.p2}
@@ -264,6 +268,15 @@ export const About: React.FC<AboutProps> = ({ lang, compact = false }) => {
                     className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
                   >
                     <span className="truncate">{lang === 'zh' ? 'Yoybuy 优贝 (跨境电商)' : 'Yoybuy.com (E-Com)'}</span>
+                    <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[12.5px]">↗</span>
+                  </a>
+                  <a
+                    href="https://blog.dwgfastview.com/"
+                    target="_blank"
+                    rel="noopener"
+                    className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
+                  >
+                    <span className="truncate">{lang === 'zh' ? 'DWG FastView 博客' : 'blog.dwgfastview.com'}</span>
                     <span className="text-slate-400 group-hover:text-blue-500 font-mono text-[12.5px]">↗</span>
                   </a>
                   <a

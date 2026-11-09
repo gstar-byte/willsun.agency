@@ -82,7 +82,7 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
           <h1 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4">
             {hero.title}
           </h1>
-          <p className="text-slate-600 dark:text-slate-300 text-lg max-w-2xl mx-auto font-normal">
+          <p className="text-slate-600 dark:text-slate-300 text-lg max-w-4xl mx-auto font-normal">
             {hero.subtitle.split('will@willsun.agency').map((part, idx, arr) => (
               <React.Fragment key={idx}>
                 {part}
@@ -114,24 +114,9 @@ export const PageClientWrapper: React.FC<PageClientWrapperProps> = ({ pageType }
           <div className="max-w-2xl mx-auto px-4">
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 sm:p-10 shadow-xl">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
-                  {t.contact.title}
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
+                  {t.contact.formTitle}
                 </h2>
-                <p className="text-slate-600 dark:text-slate-300 text-sm max-w-lg mx-auto">
-                  {t.contact.subtitle.split('will@willsun.agency').map((part, idx, arr) => (
-                    <React.Fragment key={idx}>
-                      {part}
-                      {idx < arr.length - 1 && (
-                        <a
-                          href="mailto:will@willsun.agency"
-                          className="text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4 hover:text-blue-500 transition-colors"
-                        >
-                          will@willsun.agency
-                        </a>
-                      )}
-                    </React.Fragment>
-                  ))}
-                </p>
               </div>
 
               <ContactForm lang={lang} />

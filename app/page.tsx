@@ -107,14 +107,14 @@ export default function Home() {
 
       {/* 7. Contact Consultation Section Anchor */}
       <section id="contact" className="py-20 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/80 transition-colors duration-300">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-5xl mx-auto px-4 text-center">
           <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
             {t.contact.badge}
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             {t.contact.title}
           </h2>
-          <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-4xl mx-auto mb-8 font-normal leading-relaxed">
             {t.contact.subtitle.split('will@willsun.agency').map((part, idx, arr) => (
               <React.Fragment key={idx}>
                 {part}
@@ -135,7 +135,7 @@ export default function Home() {
               e.preventDefault();
               handleOpenContact(bottomUrlInput.trim());
             }}
-            className="max-w-2xl mx-auto p-2 rounded-2xl bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700/80 shadow-lg focus-within:border-blue-600 dark:focus-within:border-blue-500 transition-all flex flex-col sm:flex-row items-center gap-2"
+            className="max-w-4xl mx-auto p-2 rounded-2xl bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700/80 shadow-lg focus-within:border-blue-600 dark:focus-within:border-blue-500 transition-all flex flex-col sm:flex-row items-center gap-2"
           >
             <div className="flex items-center w-full flex-1 px-3.5 py-2">
               <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mr-3" />

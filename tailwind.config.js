@@ -25,6 +25,17 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
+      maxWidth: {
+        md: '36rem',      // 576px (was 448px)
+        lg: '42rem',      // 672px (was 512px)
+        xl: '48rem',      // 768px (was 576px)
+        '2xl': '56rem',   // 896px (was 672px)
+        '3xl': '64rem',   // 1024px (was 768px)
+        '4xl': '72rem',   // 1152px (was 896px)
+        '5xl': '80rem',   // 1280px (was 1024px)
+        '6xl': '88rem',   // 1408px (was 1152px)
+        '7xl': '96rem',   // 1536px (was 1280px)
+      },
       fontSize: {
         xs: ['0.9375rem', { lineHeight: '1.375rem' }],     // 15px (12px * 1.25)
         sm: ['1.09375rem', { lineHeight: '1.625rem' }],    // 17.5px (14px * 1.25)

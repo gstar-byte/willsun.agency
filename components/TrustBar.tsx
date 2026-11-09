@@ -32,7 +32,7 @@ export const TrustBar: React.FC<TrustBarProps> = ({ lang }) => {
 
   return (
     <section className="py-12 border-y border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 relative transition-colors duration-300">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm sm:text-base font-bold tracking-widest text-slate-500 dark:text-slate-400 uppercase mb-8">
           {t.heading}
         </p>

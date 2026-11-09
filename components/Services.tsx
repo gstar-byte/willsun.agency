@@ -17,20 +17,22 @@ export const Services: React.FC<ServicesProps> = ({ lang, onOpenContact, compact
   const icons = [Compass, Target, DollarSign, Code];
 
   return (
-    <section id="services" className="py-24 relative bg-slate-50 dark:bg-slate-900/60 transition-colors duration-300">
+    <section id="services" className="py-16 md:py-24 relative bg-slate-50 dark:bg-slate-900/60 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
-            {t.badge}
+        {/* Section Header (Shown only on Home Page digest; full page uses PageClientWrapper header) */}
+        {compact && (
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <div className="inline-block px-3.5 py-1 rounded-full border border-blue-200 dark:border-blue-900/50 bg-blue-50 dark:bg-blue-950/60 text-slate-800 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+              {t.badge}
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+              {t.title}
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
+              {t.subtitle}
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
-            {t.title}
-          </h2>
-          <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
-            {t.subtitle}
-          </p>
-        </div>
+        )}
 
         {/* 2x2 Full-Lifecycle Solution Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
