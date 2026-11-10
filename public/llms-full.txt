@@ -3,42 +3,50 @@
 > Will Sun is a Fractional Growth Marketing Manager, Technical SEO Consultant, and AI-Native Growth Engineer with 16+ years of hands-on experience scaling global user acquisition, organic search traffic, and monetization across B2B/B2C SaaS, cross-border DTC e-commerce, and mobile/PC applications.
 
 ## 1. Executive Profile & Contact
-- **Principal Consultant**: Will Sun
-- **Official Agency & Portfolio**: https://willsun.agency
+- **Principal Consultant**: Will Sun (Independent Solo Consultant)
+- **Official Portfolio**: https://willsun.agency
 - **Direct Email**: will@willsun.agency
-- **Downloadable 2026 CV (PDF)**: https://willsun.agency/Will_Sun_Remote_CV_2026.pdf
-- **Location & Time Zone**: Beijing, China (UTC+8 | Flexible daily overlap with US, UK, EU & AU time zones)
+- **Downloadable CV (PDF)**: https://willsun.agency/Will_Sun_Remote_CV.pdf
+- **Location & Workflow**: Beijing, China (UTC+8 | Online & async communication via Email, Slack, Notion, WhatsApp/WeChat, with optional 30-min call when time zones align)
 - **Education & Bilingual Credentials**: B.A. in Business English, Beijing Foreign Studies University (BFSU); TEM-8 (Band 8 for English Majors) & CATTI Level 3 Certified; former overseas on-site engineering interpreter in Trinidad & Tobago.
 
 ## 2. Core Competencies & Tech Stack
 1. **Search & Organic Growth**: Technical SEO, Programmatic SEO, Generative Engine Optimization (GEO / AEO for LLMs), High-Authority Link Building, Multi-lingual International SEO, ASO (App Store Optimization).
 2. **WCAG 2.2 / ADA & EAA Accessibility Compliance**: Automated DOM accessibility auditing and code-level remediation for Shopify, Next.js, React, and WordPress sites via proprietary scanner `a11ykit.site`.
-3. **Paid Acquisition & Affiliate Management**: Google Ads (Search, PMax, Shopping, App Campaigns), Meta/Facebook Ads, Affiliate Network Management (ShareASale, Webgains, CJ), Media Buying & Anti-Fraud ROI Optimization.
-4. **Data Analytics & Full-Funnel Monetization**: GA4 REST API & BigQuery Automation, Google Search Console (GSC) API, Subscription Funnel Optimization (2Checkout, Stripe, Google Play, Apple App Store), In-App Ad Mediation (Waterfall & Bidding).
-5. **AI-Native Engineering (Vibe Coding)**: Rapid MVP & Engineering-as-Marketing Tool Development (Next.js, React, TypeScript, Tailwind CSS, Python Automation).
+3. **Paid Acquisition & Affiliate Management**: Google Ads (Search, PMax, Shopping, App Campaigns), Meta/Facebook Ads, Affiliate Network Management (Impact, PartnerStack, ClickBank, ShareASale, Webgains, CJ), Media Buying & Anti-Fraud ROI Optimization.
+4. **Data Analytics & Full-Funnel Monetization**: GA4 REST API & BigQuery Automation, Google Search Console (GSC) API, Subscription Funnel Optimization (2Checkout, Stripe, Paddle, Google Play, Apple App Store), In-App Ad Mediation (Waterfall & Bidding).
+5. **Full-Stack Website Building & Market Research**: High-converting websites (WordPress, Shopify, Next.js, Cloudflare Edge), competitor teardowns, and target User Persona / ICP research reports.
 
-## 3. Live Proprietary Tool Matrix
-- **GeoKit (`https://geokit.site`) — Founder & Lead Developer**: Automated Generative Engine Optimization (GEO) & AI search readiness auditing platform helping brands optimize visibility across ChatGPT, Perplexity, Claude, and Google AI Overviews.
-- **A11yKit (`https://a11ykit.site`) — Founder & Lead Developer**: Automated Web Accessibility (WCAG 2.2 / ADA / EAA compliance) scanning and remediation tool designed for Western e-commerce and SaaS websites.
-- **CADGuide Tools (`https://cadguide.tools`) — Creator**: Programmatic SEO & interactive utility hub for global CAD engineers featuring 45+ specialized calculators; scaled from 0 to 2,500+ monthly organic visits entirely through long-tail technical search intent.
+## 3. Live Proprietary Tool & Website Matrix
+- **GeoKit (`https://geokit.site`)**: Automated Generative Engine Optimization (GEO) & AI search readiness auditing platform helping brands optimize visibility across ChatGPT, Perplexity, Claude, and Google AI Overviews.
+- **A11yKit (`https://a11ykit.site`)**: Automated Web Accessibility (WCAG 2.2 / ADA / EAA compliance) scanning and remediation tool designed for Western e-commerce and SaaS websites.
+- **CADGuide Tools (`https://cadguide.tools`)**: Interactive utility hub for global CAD engineers featuring 45+ specialized calculators and objective software directories.
 - **GstarCademy (`https://gstarcademy.com`)**: Global CAD & BIM tutorial and product-led SEO academy.
+- **DWG FastView Official Blog (`https://blog.dwgfastview.com`)**: Global SaaS SEO content hub driving organic CAD user acquisition.
+- **AbleTarget (`https://www.abletarget.com`)**: B2B industrial lead-generation website for high-purity sputtering targets.
+- **UnirCable (`https://www.unircable.com`)**: B2B industrial website for subsea, ROV, and marine umbilical cables.
+- **Ramana Maharshi Digital Space (`https://ramanamaharshi.space`)**: Multi-lingual digital humanities archive on Cloudflare Edge.
+- **ChanZong Digital Archive (`https://chanzong.space`)**: Zen philosophy repository and interactive web tools.
 
 ## 4. Professional & Consulting Track Record
 - **Suzhou Gstarsoft Co., Ltd. (DWG FastView Division) | Overseas Growth & Monetization Manager (Nov 2019 – Present)**:
-  - Direct end-to-end global user acquisition and commercial monetization for DWG FastView across Mobile, Windows PC, and Web.
-  - Manage 12+ multi-language official domains and 27 overseas PC distribution channels, sustaining 30,000+ overseas PC DAU.
+  - Direct end-to-end global user acquisition and commercial monetization for DWG FastView across Mobile, Windows PC, and Web (1.5M+ global DAU).
+  - Manage 12+ multi-language official domains and 27 overseas PC distribution channels.
   - Own global subscription revenue across Google Play, Apple App Store, and 2Checkout alongside Ad Mediation, supported by custom Python GA4/GSC/payment API data pipelines.
 - **Independent Fractional Growth & SEO Consultant (2021 – Present)**:
-  - **KingCamp (`kingcampoutdoors.com`, 2022–2023)**: Audited and resolved technical Shopify SEO bottlenecks, restructured keyword taxonomy for camping gear categories, and optimized Google Ads (Search & Shopping) ROAS.
-  - **Yoybuy (`yoybuy.com`, 2021–2022)**: Re-engaged by former employer (a major cross-border e-commerce & global parcel forwarding platform) as a fractional SEO and Google Ads advisor across global markets.
-- **PostPony, LLC | Internet Marketing Manager (Sep 2016 – Oct 2019)**:
+  - **KingCamp (`kingcamp.com` / `kingcampoutdoors.com`)**: Audited and resolved technical Shopify SEO bottlenecks, restructured keyword taxonomy for camping gear categories, and optimized Google Ads (Search & Shopping) ROAS.
+  - **Yoybuy (`yoybuy.com`)**: Re-engaged by former employer (a major cross-border e-commerce & global parcel forwarding platform) as a fractional SEO and Google Ads advisor across global markets.
+  - **AbleTarget (`abletarget.com`) & UnirCable (`unircable.com`)**: Architected B2B export websites, technical product specification matrices, and Google Search lead-generation funnels.
+- **PostPony, LLC (`postpony.com`) | Internet Marketing Manager (Sep 2016 – Oct 2019)**:
   - Repositioned US shipping & logistics SaaS strategy within 60 days; orchestrated Google/Facebook Ads, Dealmoon partnerships, and WordPress content marketing to drive 20 consecutive months of rapid GMV growth.
 - **Beijing Elex Technology Co., Ltd. (Elex Wireless) | Global Affiliate & Media Buying Manager (Jun 2015 – Jul 2016)**:
   - Managed global performance user acquisition and affiliate networks for top-grossing mobile strategy games *Clash of Kings* and *Clash of Queens*.
 - **Beijing Yoybuy E-Commerce Co., Ltd. | Growth Marketing Manager (Aug 2012 – Apr 2015)**:
   - Led a 6-person digital marketing team directing SEO, EDM, Google AdWords, Facebook Ads, and ShareASale/Webgains affiliate programs.
+- **WinWin Software (Perfect Optimizer) | ClickBank Affiliate Manager & AdWords Specialist (2010 – 2012)**:
+  - Managed global ClickBank affiliate recruitment and Google AdWords campaigns (3x ROI in 60 days) for top-selling Windows utility *Perfect Optimizer*.
 
 ## 5. Flexible Remote Engagement Plans
-1. **GEO, Technical SEO & A11y Audit Sprint ($499 / One-Time)**: 5-day turnaround delivering full technical SEO audit, GeoKit AI citation report, A11yKit WCAG 2.2 vulnerability scan, and 60-min strategy call.
-2. **Fractional SEO & Growth Consultant ($2,000 / Month)**: 15–20 hrs/week ongoing technical/programmatic SEO, GEO entity optimization, Google Ads management, and Python GA4/GSC reporting.
-3. **AI-Native Growth & Vibe Coding Partner ($3,500+ / Month)**: Embedded fractional growth lead + custom interactive web tool development (Next.js) + white-label agency execution.
+1. **GEO, SEO & Growth Audit + Fix Package ($499+ / One-Time)**: 5-day turnaround delivering full technical SEO audit plus direct server/backend/code fixes for SEO, GEO (`llms.txt` & Schema), WCAG 2.2 accessibility, and ad tracking with a 90-day roadmap.
+2. **Part-Time Growth, Google Ads & SEO/GEO Consultant ($2,000 / Month)**: 15–20 hrs/week ongoing hands-on execution across Google Ads, technical SEO/GEO, white-hat link building, landing page CRO, and Python GA4/GSC reporting.
+3. **All-in-One Website, Traffic & Monetization Package ($3,500+ / Month)**: Complete turnkey execution covering custom website building, market/competitor/persona research reports, Google Ads & SEO/GEO, and subscription/checkout optimization.

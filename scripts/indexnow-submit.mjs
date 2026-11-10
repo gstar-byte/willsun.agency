@@ -11,9 +11,13 @@ const URLS = [
   `https://${HOST}/`,
   `https://${HOST}/services`,
   `https://${HOST}/cases`,
+  `https://${HOST}/works`,
   `https://${HOST}/pricing`,
   `https://${HOST}/about`,
-  `https://${HOST}/contact`
+  `https://${HOST}/contact`,
+  `https://${HOST}/llms.txt`,
+  `https://${HOST}/llms-full.txt`,
+  `https://${HOST}/Will_Sun_Remote_CV.pdf`
 ];
 
 async function submitIndexNow() {

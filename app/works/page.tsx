@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { PageClientWrapper } from '@/components/PageClientWrapper';
 
 export const metadata: Metadata = {
-  title: 'Works & Incubated Digital Assets | CADGuide, GstarCademy, A11yKit, GeoKit, RamanaMaharshi, ChanZong',
-  description: 'Explore the digital portfolio, engineering tools, educational academies, and cultural archives built, scaled, and managed by WillSun Agency.',
+  title: 'Works & Live Website Portfolio | GeoKit, A11yKit, CADGuide, AbleTarget, UnirCable',
+  description: 'Explore the 9 live websites, GEO/WCAG audit engines, CAD engineering hubs, B2B industrial websites (AbleTarget, UnirCable), and digital archives built and scaled by Will Sun.',
   alternates: {
     canonical: 'https://willsun.agency/works',
   },
   openGraph: {
-    title: 'Featured Digital Assets & Portfolio | WillSun Agency',
-    description: 'A curated showcase of engineering portals, educational platforms, accessibility toolkits, and cultural digital spaces.',
+    title: 'Live Website & Tool Portfolio | WillSun Agency',
+    description: 'A showcase of 9 live SEO/GEO audit engines, CAD portals, B2B industrial websites, and digital humanities archives.',
     url: 'https://willsun.agency/works',
   },
 };

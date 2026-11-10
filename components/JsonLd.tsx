@@ -45,35 +45,38 @@ export const JsonLd: React.FC = () => {
           'https://a11ykit.site',
           'https://cadguide.tools',
           'https://gstarcademy.com',
+          'https://blog.dwgfastview.com',
+          'https://www.abletarget.com',
+          'https://www.unircable.com',
           'https://ramanamaharshi.space',
           'https://chanzong.space'
         ],
         'hasOfferCatalog': {
           '@type': 'OfferCatalog',
-          'name': 'Fractional Growth & Technical SEO Services',
+          'name': 'Hands-On Web Building, Google Ads, GEO/SEO & Monetization Services',
           'itemListElement': [
             {
               '@type': 'Offer',
               'itemOffered': {
                 '@type': 'Service',
-                'name': 'GEO, Technical SEO & WCAG 2.2 Audit Sprint ($499)',
-                'description': 'Comprehensive technical SEO, AI search citation readiness (GeoKit.site), and WCAG 2.2 / ADA compliance (A11yKit.site) audit with a 90-day roadmap.'
+                'name': 'GEO, SEO & Growth Audit + Fix Package ($499+)',
+                'description': 'Full SEO, indexing & speed audit plus direct server, backend, or code fixes for technical SEO, GEO (llms.txt & Schema), WCAG 2.2 accessibility, and Google/Meta Ads tracking with a 90-day action plan.'
               }
             },
             {
               '@type': 'Offer',
               'itemOffered': {
                 '@type': 'Service',
-                'name': 'Fractional SEO & Growth Consultant Retainer ($2,000/mo)',
-                'description': '15–20 hrs/week dedicated senior execution across Technical/Programmatic SEO, GEO entity schema, Google Ads, and Python GA4/GSC reporting.'
+                'name': 'Part-Time Growth, Google Ads & SEO/GEO Consultant ($2,000/mo)',
+                'description': '15–20 hrs/week hands-on execution across Google Ads, technical SEO, GEO (llms.txt/Schema), white-hat link building, landing page CRO, and automated Python GA4/GSC reporting.'
               }
             },
             {
               '@type': 'Offer',
               'itemOffered': {
                 '@type': 'Service',
-                'name': 'AI-Native Growth & Vibe Coding Partner ($3,500+/mo)',
-                'description': 'Full-stack fractional growth leadership, custom interactive web tool development (Next.js), subscription CRO, and agency white-label delivery.'
+                'name': 'All-in-One Website, Traffic & Monetization Package ($3,500+/mo)',
+                'description': 'Turnkey execution covering custom website building, competitor/market/persona research reports, Google Ads & SEO/GEO, and subscription/checkout optimization.'
               }
             }
           ]
@@ -82,8 +85,8 @@ export const JsonLd: React.FC = () => {
       {
         '@type': 'ItemList',
         '@id': 'https://willsun.agency/#works',
-        'name': 'Featured AI-Native SaaS Audit Engines & Programmatic Portals',
-        'description': 'Live web tools and audit platforms independently architected and scaled by Will Sun',
+        'name': 'Proprietary Audit Engines, B2B Industrial Sites & Content Portals',
+        'description': 'Live web tools, B2B industrial sites, and content portals built and scaled by Will Sun',
         'itemListElement': [
           {
             '@type': 'ListItem',
@@ -115,7 +118,7 @@ export const JsonLd: React.FC = () => {
               'name': 'CADGuide.tools',
               'url': 'https://cadguide.tools',
               'applicationCategory': 'DesignApplication',
-              'description': 'Programmatic SEO & interactive utility hub for global CAD engineers featuring 45+ calculation tools and 2,500+ monthly organic visits.'
+              'description': 'Interactive engineering utility hub for global CAD/BIM professionals featuring 45+ specialized calculation utilities and software directories.'
             }
           },
           {
@@ -126,6 +129,56 @@ export const JsonLd: React.FC = () => {
               'name': 'GstarCademy',
               'url': 'https://gstarcademy.com',
               'description': 'Global CAD/BIM education and product-led SEO training academy for professional designers and engineers.'
+            }
+          },
+          {
+            '@type': 'ListItem',
+            'position': 5,
+            'item': {
+              '@type': 'WebSite',
+              'name': 'DWG FastView Official Blog',
+              'url': 'https://blog.dwgfastview.com',
+              'description': 'Global SaaS technical SEO & product content hub for DWG FastView.'
+            }
+          },
+          {
+            '@type': 'ListItem',
+            'position': 6,
+            'item': {
+              '@type': 'WebSite',
+              'name': 'AbleTarget (Sputtering Targets)',
+              'url': 'https://www.abletarget.com',
+              'description': 'Global B2B industrial website and product specification matrix for high-purity sputtering targets.'
+            }
+          },
+          {
+            '@type': 'ListItem',
+            'position': 7,
+            'item': {
+              '@type': 'WebSite',
+              'name': 'UnirCable (Subsea & ROV Cables)',
+              'url': 'https://www.unircable.com',
+              'description': 'Custom B2B industrial website and Google Search acquisition funnel for underwater and ROV cables.'
+            }
+          },
+          {
+            '@type': 'ListItem',
+            'position': 8,
+            'item': {
+              '@type': 'WebSite',
+              'name': 'Ramana Maharshi Digital Space',
+              'url': 'https://ramanamaharshi.space',
+              'description': 'Multi-lingual digital humanities archive preserving the teachings of Sri Ramana Maharshi.'
+            }
+          },
+          {
+            '@type': 'ListItem',
+            'position': 9,
+            'item': {
+              '@type': 'WebSite',
+              'name': 'ChanZong Digital Archive',
+              'url': 'https://chanzong.space',
+              'description': 'Open digital repository curating Chan (Zen) Buddhism texts and contemplative web utilities.'
             }
           }
         ]
