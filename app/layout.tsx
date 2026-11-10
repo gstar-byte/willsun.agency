@@ -89,20 +89,75 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        {/* Google tag (gtag.js) for GA4 and Google Search Console verification */}
+        {/* Google Analytics with Consent Mode v2 & Headless Datacenter Bot Shield */}
         <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-1B29WEPTV9"
-        />
-        <script
+          data-cfasync="false"
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-1B29WEPTV9');
+              (function() {
+                var isHeadlessBot = false;
+                try {
+                  var ua = navigator.userAgent || '';
+                  var sw = window.screen ? window.screen.width : 0;
+                  var sh = window.screen ? window.screen.height : 0;
+                  var res = sw + 'x' + sh;
+                  var botScreens = {
+                    '1280x1200': 1,
+                    '1366x1366': 1,
+                    '1280x1280': 1,
+                    '1600x1600': 1,
+                    '1280x1600': 1,
+                    '1600x1200': 1,
+                    '800x600': 1
+                  };
+                  if (
+                    navigator.webdriver === true ||
+                    /HeadlessChrome|PhantomJS|Playwright|Puppeteer|SlimerJS|CasperJS/i.test(ua) ||
+                    botScreens[res] === 1 ||
+                    (sw > 0 && sw === sh)
+                  ) {
+                    isHeadlessBot = true;
+                  } else {
+                    var c = document.createElement('canvas');
+                    var gl = c.getContext('webgl') || c.getContext('experimental-webgl');
+                    if (gl) {
+                      var dbg = gl.getExtension('WEBGL_debug_renderer_info');
+                      if (dbg) {
+                        var renderer = gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) || '';
+                        if (/SwiftShader|llvmpipe|Software Rasterizer/i.test(renderer)) {
+                          isHeadlessBot = true;
+                        }
+                      }
+                    }
+                  }
+                } catch (_) {}
+
+                if (isHeadlessBot) {
+                  window['ga-disable-G-1B29WEPTV9'] = true;
+                  return;
+                }
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
+
+                gtag('consent', 'default', {
+                  'analytics_storage': 'granted',
+                  'ad_storage': 'granted',
+                  'ad_user_data': 'granted',
+                  'ad_personalization': 'granted'
+                });
+
+                gtag('js', new Date());
+                gtag('config', 'G-1B29WEPTV9');
+              })();
             `,
           }}
+        />
+        <script
+          data-cfasync="false"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-1B29WEPTV9"
         />
         <JsonLd />
       </head>

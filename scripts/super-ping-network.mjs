@@ -22,6 +22,7 @@ const PING_NETWORKS = [
         'https://willsun.agency/',
         'https://willsun.agency/services',
         'https://willsun.agency/cases',
+        'https://willsun.agency/works',
         'https://willsun.agency/pricing',
         'https://willsun.agency/about',
         'https://willsun.agency/contact'
@@ -39,7 +40,15 @@ const PING_NETWORKS = [
       host: 'willsun.agency',
       key: 'e4b3c9a17f284e6db5a1098234efc891',
       keyLocation: 'https://willsun.agency/e4b3c9a17f284e6db5a1098234efc891.txt',
-      urlList: ['https://willsun.agency/', 'https://willsun.agency/services', 'https://willsun.agency/cases']
+      urlList: [
+        'https://willsun.agency/',
+        'https://willsun.agency/services',
+        'https://willsun.agency/cases',
+        'https://willsun.agency/works',
+        'https://willsun.agency/pricing',
+        'https://willsun.agency/about',
+        'https://willsun.agency/contact'
+      ]
     })
   },
   {
@@ -53,7 +62,15 @@ const PING_NETWORKS = [
       host: 'willsun.agency',
       key: 'e4b3c9a17f284e6db5a1098234efc891',
       keyLocation: 'https://willsun.agency/e4b3c9a17f284e6db5a1098234efc891.txt',
-      urlList: ['https://willsun.agency/', 'https://willsun.agency/services']
+      urlList: [
+        'https://willsun.agency/',
+        'https://willsun.agency/services',
+        'https://willsun.agency/cases',
+        'https://willsun.agency/works',
+        'https://willsun.agency/pricing',
+        'https://willsun.agency/about',
+        'https://willsun.agency/contact'
+      ]
     })
   },
   {

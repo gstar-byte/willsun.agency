@@ -34,6 +34,7 @@ next-env.d.ts
 .remote-platforms-session/
 __pycache__/
 outreach_reports/
+scratch/
 *.log
 
 .vercel
